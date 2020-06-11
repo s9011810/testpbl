@@ -33,7 +33,7 @@ class Card(models.Model):
     context = models.TextField(blank=True)
     context1 = models.TextField(blank=True)
     context2 = models.TextField(blank=True)
-    cover = models.ImageField(upload_to="card/covers/", null=True, blank=True)
+    cover = models.ForeignKey('UPCard', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
