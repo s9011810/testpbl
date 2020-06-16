@@ -24,16 +24,11 @@ class UPCard(models.Model):
 
 class Card(models.Model):
     title = models.CharField(max_length=100)
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    group = models.ForeignKey('auth.Group', on_delete=models.CASCADE, null=True, blank=True)
-    created_date = models.DateTimeField(
-        default=timezone.now)
-    published_date = models.DateTimeField(
-        blank=True, null=True)
+    author = models.ForeignKey('login.User', on_delete=models.CASCADE, null=True, blank=True)
     context = models.TextField(blank=True)
-    context1 = models.TextField(blank=True)
-    context2 = models.TextField(blank=True)
-    cover = models.ForeignKey('UPCard', on_delete=models.CASCADE)
+    created_date = models.DateTimeField(default=timezone.now)
+    published_date = models.DateTimeField(blank=True, null=True)
+    cover = models.ForeignKey('UPCard', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.title

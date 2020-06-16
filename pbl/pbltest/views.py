@@ -6,14 +6,16 @@ from django.template.loader import get_template
 from django.views.generic import ListView, CreateView
 from .models import UPCard, Card
 from django.urls import reverse_lazy
+from . import forms
 from .forms import CardForm, CreateCardForm
 # Create your views here.
 
 
 def post_card(request):
     if request.method == "POST":
-        form = CreateCardForm(request.POST)
-        if form.is_valid():
+        card_form = forms.CreateCardForm(request.POST)
+        if card_form.is_valid():
+            card_form.save()
             return redirect('index')
     else:
         form = CreateCardForm()
@@ -34,9 +36,10 @@ def index(request):
 
 
 def cardind(request):
-    template = get_template('card_base.html')
-    card_html = template.render(locals())
-    return HttpResponse(card_html)
+    up_cards = Card.objects.all()
+    return render(request, 'card_base.html', {
+        'up_cards': up_cards
+    })
 
 
 def upload_card(request):
@@ -61,7 +64,7 @@ def card_list(request):
 
 
 def check_card(request):
-    up_cards = UPCard.objects.all()
+    up_cards = Card.objects.all()
     return render(request, 'check_card.html', {
         'up_cards': up_cards
     })

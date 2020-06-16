@@ -20,21 +20,17 @@
 </table>
 {% block cardcontext %}
 
-{% for card in up_card %}
-    {{ card.title }}
-    {% endfor %}
     <table class="table table-bordered table-dark">
         <tbody class="text-center">
             <tr class="team_work">
-
 
                 <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >第一組</a></th>
                 <th scope="col">st1</th>
                 <th scope="col">st2</th>
                 <th scope="col">st3</th>
-
             </tr>
         </tbody>
+
      <tbody class="text-center">
             <tr class="team_work">
                 <th scope="col" style="padding-bottom: 10%">第二組</th>
