@@ -51,17 +51,13 @@ class CreateCardForm(forms.ModelForm):
     title = forms.CharField(widget=forms.TextInput(
         attrs={
             'class': 'form-control',
-<<<<<<< HEAD
             'id': 'card-title',
-=======
->>>>>>> b2a0a22e9187bd577fb611f733308e5f9f029519
         }
     ))
 
     context = forms.CharField(widget=forms.Textarea(
         attrs={
             'class': 'form-control',
-<<<<<<< HEAD
             'id': 'card-context',
         }
     ))
@@ -83,15 +79,7 @@ class CreateCardForm(forms.ModelForm):
             attrs={
                 'class': 'form-control',
                 'id': 'card-cover',
-
-            }
-        )
-=======
-        }
-    ))
-    author = forms.IntegerField(
-        widget=forms.Select()
->>>>>>> b2a0a22e9187bd577fb611f733308e5f9f029519
+            })
     )
 
     class Meta:
