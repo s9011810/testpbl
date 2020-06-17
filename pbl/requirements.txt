@@ -1,0 +1,8 @@
+captcha==0.3
+Django==2.2.5
+Pillow==6.1.0
+PyMySQL==0.9.3
+pytz==2019.2
+sqlparse==0.3.0
+virtualenv==16.7.5
+virtualenvwrapper-win==1.2.5

@@ -4,11 +4,11 @@
 {% endblock %}
 {% block content %}
     <div class="table-responsive">
-        <a href={% url 'upload_card' %}><button class="btn-primary btn">123</button></a>
+        <a href={% url 'upload_card' %}><button class="btn-primary btn">上傳卡片</button></a>
 <table class="table mb-0">
 
         <tbody>
-            {% for cards in cards %}
+            {% for card in up_cards %}
                 <tr>
                     <td>
                         {% if card.cover %}

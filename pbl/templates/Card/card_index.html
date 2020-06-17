@@ -23,11 +23,10 @@
     <table class="table table-bordered table-dark">
         <tbody class="text-center">
             <tr class="team_work">
-
                 <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >第一組</a></th>
-                <th scope="col">st1</th>
-                <th scope="col">st2</th>
-                <th scope="col">st3</th>
+                     {% for up_card in up_cards %}
+                         <th scope="col"><img src="{{ up_card.cover.cover.url }}" style="width: 300px;height: 300px"></th>
+                {% endfor %}
             </tr>
         </tbody>
 
