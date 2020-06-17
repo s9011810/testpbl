@@ -13,7 +13,7 @@
 <table class="table table-bordered">
     <thead >
     <th class="text-center"scope="col"><a href={% url 'upload_card' %} ><button type="button" class="btn">工作坊表單上傳</button></a> </th>
-    <th class="text-center" scope="col"><a href={% url 'createcard' %} ><button type="button" class="btn">表單轉卡片</button></a></th>
+    <th class="text-center" scope="col"><button type="button" class="btn">表單轉卡片</button></th>
       <th class="text-center" scope="col"><button type="button" class="btn">專案卡片資料庫</button> </th>
     <th class="text-center" scope="col"><button type="button" class="btn"><a herf={% url 'check_card' %}>專案成果上傳</a></button> </th>
     </thead>
@@ -25,7 +25,7 @@
             <tr class="team_work">
                 <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >第一組</a></th>
                      {% for up_card in up_cards %}
-                         <th scope="col"><img src="{{ up_card.cover.cover.url }}" style="width: 300px;height: 300px"></th>
+                         <th scope="col"><a href="{% url 'createcard' pk=up_card.cover_id %}"> <h3>卡片名稱:{{ up_card.title }}</h3><img src="{{ up_card.cover.cover.url }}" style="width: 300px;height: 300px"></a></th>
                 {% endfor %}
             </tr>
         </tbody>

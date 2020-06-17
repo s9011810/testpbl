@@ -28,7 +28,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -113,6 +113,21 @@
       <workItem from="1592295258422" duration="5109000" />
       <workItem from="1592313039501" duration="5109000" />
       <workItem from="1592340642314" duration="8596000" />
+      <workItem from="1592350762909" duration="405000" />
+      <workItem from="1592354644998" duration="798000" />
+      <workItem from="1592356403171" duration="132000" />
+      <workItem from="1592356953151" duration="1694000" />
+      <workItem from="1592358890867" duration="599000" />
+      <workItem from="1592359555776" duration="192000" />
+      <workItem from="1592360318107" duration="340000" />
+      <workItem from="1592363136900" duration="1443000" />
+      <workItem from="1592364995272" duration="4036000" />
+      <workItem from="1592369963778" duration="5745000" />
+      <workItem from="1592436512378" duration="11467000" />
+      <workItem from="1592684564183" duration="1687000" />
+      <workItem from="1592708487230" duration="1685000" />
+      <workItem from="1592799194930" duration="653000" />
+      <workItem from="1592849350719" duration="953000" />
     </task>
     <servers />
   </component>
@@ -120,34 +135,34 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590729534059">
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592364583303">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1590729534059" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590300981202">
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1592364583303" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592543431391">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590300981202" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1591763677071">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1592543431391" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1592364089081">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591763677071" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1592076869984">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592364089081" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1592377229915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592076869984" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1592076869984">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592377229915" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1592377229915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592076869984" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1592076869984">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592377229915" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1592377229915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592076869984" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1592076869984">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592377229915" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1592377229915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592076869984" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592377229915" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1590476319540">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -164,10 +179,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590476319540" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591678300410">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1592364120676">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591678300410" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592364120676" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592542019556">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592542019556" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

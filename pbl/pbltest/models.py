@@ -17,6 +17,7 @@ class UPCard(models.Model):
     author = models.CharField(max_length=100)
     pdf = models.FileField(upload_to="media/card/img/")
     cover = models.ImageField(upload_to="card/covers/", null=True, blank=True)
+    class_material = models.CharField(max_length=100, default='test')
 
     def __str__(self):
         return self.title

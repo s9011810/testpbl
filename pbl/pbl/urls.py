@@ -28,11 +28,11 @@ urlpatterns = [
     path('login/', views.login),
     path('logout/', views.logout),
     path('register/', views.register),
-    path('card/', cardind, name='card'),
+    path('card', cardind, name='card'),
     path('upload_card/', UploadView.as_view(), name='upload_card'),
     path('class/card_list/<int:pk>', delete_card, name='class_delete_card'),
     path('checkcard', CardListView.as_view(), name='check_card'),
-    path('createcard', post_card, name='createcard')
+    path('createcard/<int:pk>', post_card, name='createcard'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,10 +1,10 @@
 {% block context %}
     <form method="POST" class="post-form">
         {% csrf_token %}
-
             <div class="container" style="margin-top: 5%">
                 <div class="row">
                     <div class="col-md-6">
+                        <img src="{{ card.cover.url }}" width="90%">
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">

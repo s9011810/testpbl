@@ -11,7 +11,9 @@ from .forms import CardForm, CreateCardForm
 # Create your views here.
 
 
-def post_card(request):
+def post_card(request,pk):
+    post = UPCard.objects.all()
+    card=UPCard.objects.get(id=pk)
     if request.method == "POST":
         card_form = forms.CreateCardForm(request.POST)
         if card_form.is_valid():
@@ -19,7 +21,12 @@ def post_card(request):
             return redirect('index')
     else:
         form = CreateCardForm()
-    return render(request, "create_card.html", {'form': form})
+    context = {
+        'form': form,
+        'pk' : pk,
+        'card':card,
+    }
+    return render(request, "create_card.html", context)
 
 
 def check_create_card(request):
@@ -60,7 +67,11 @@ def card_list(request):
             return redirect('check_card')
     else:
         form = CardForm()
-    return render(request, 'cardlist.html', {'form': form})
+    context = {
+        'form': form,
+    }
+    request.session['lucky_number'] = 8
+    return render(request, 'cardlist.html', context)
 
 
 def check_card(request):
@@ -90,3 +101,4 @@ def delete_card(request, pk):
         card = UPCard.objects.get(pk=pk)
         card.delete()
     return redirect('check_card')
+
