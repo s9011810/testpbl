@@ -19,7 +19,7 @@ from django.conf import settings
 from django.urls import path, include
 from pbltest.views import index
 from login import views
-from pbltest.views import cardind, upload_card, card_list, CardListView, CreateView, delete_card, UploadView, post_card
+from pbltest.views import cardind, upload_card, card_list, CardListView, CreateView, delete_card, UploadView, post_card, change_card, card_manage
 
 
 urlpatterns = [
@@ -33,6 +33,8 @@ urlpatterns = [
     path('class/card_list/<int:pk>', delete_card, name='class_delete_card'),
     path('checkcard', CardListView.as_view(), name='check_card'),
     path('createcard/<int:pk>', post_card, name='createcard'),
+    path('changecard/<int:pk>', change_card, name = 'change_card'),
+    path('card_manage', card_manage, name = 'card_manage')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

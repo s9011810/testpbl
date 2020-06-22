@@ -44,10 +44,30 @@ def index(request):
 
 def cardind(request):
     up_cards = Card.objects.all()
-    return render(request, 'card_base.html', {
+    textbook = UPCard.objects.all()
+    context ={
+        'up_cards': up_cards,
+        'textbook': textbook
+    }
+    return render(request, 'card_base.html', context)
+
+def card_manage(request):
+    up_cards = Card.objects.all()
+    return render(request, 'card_manage.html', {
         'up_cards': up_cards
     })
 
+def change_card(request,pk):
+    unit = Card.objects.get(id=pk)
+    card_form = CreateCardForm(request.POST or None, instance = unit)
+    context = {
+        'card_form': card_form,
+        'unit': unit,
+    }
+    if card_form.is_valid():
+        card_form.save()
+        return redirect('index')
+    return render(request, 'change_card.html', context)
 
 def upload_card(request):
     context = {}

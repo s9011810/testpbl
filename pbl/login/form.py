@@ -10,11 +10,11 @@ class UserForm(forms.Form):
 
 class RegisterForm(forms.Form):
     gender = (
-        ('male', "男"),
-        ('female', "女"),
+        ('guest', "訪客"),
+        ('teacher', "引導師"),
     )
     username = forms.CharField(label="用戶名", max_length=128, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    password1 = forms.CharField(label="", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    password1 = forms.CharField(label="密碼", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     password2 = forms.CharField(label="確認密碼", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     email = forms.EmailField(label="email", widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    sex = forms.ChoiceField(label='性別', choices=gender)
+    identify = forms.ChoiceField(label='身分', choices=gender)
