@@ -27,20 +27,21 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/card/img" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\pbl\templates" />
-      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\pbl\static\images" />
       <recent name="C:\Users\user\Desktop\pbl\templates" />
       <recent name="C:\Users\user\Desktop\pbl\pbltest" />
       <recent name="C:\Users\123\PycharmProjects\pbl" />
       <recent name="C:\Users\123\PycharmProjects\pbl\mysitepbl\static\images\webimages" />
-      <recent name="C:\Users\123\PycharmProjects\pbl\templates\tool" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
+      <recent name="C:\Users\user\Desktop\pbl\templates" />
+      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
     </key>
   </component>
   <component name="RunManager">
@@ -134,6 +135,11 @@
       <workItem from="1592849350719" duration="953000" />
       <workItem from="1592875138966" duration="1134000" />
       <workItem from="1592898893310" duration="3822000" />
+      <workItem from="1592984936563" duration="536000" />
+      <workItem from="1593149145359" duration="6591000" />
+      <workItem from="1593183604232" duration="2094000" />
+      <workItem from="1593497533328" duration="3927000" />
+      <workItem from="1593513268105" duration="11463000" />
     </task>
     <servers />
   </component>
@@ -185,10 +191,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590476319540" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1592364120676">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1593165036718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592364120676" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1593165036718" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1593163051136" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592542019556">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

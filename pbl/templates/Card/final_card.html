@@ -1,0 +1,60 @@
+<script  src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function screenshot(){
+
+        html2canvas(document.getElementById('chart3')).then(function(canvas) {
+            document.body.appendChild(canvas);
+            var a = document.createElement('a');
+            a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+            a.download = 'image.jpg';
+            a.click();
+        });
+    }
+</script>
+{% load staticfiles %}
+<div class="container" id="chart3">
+    <div class="row">
+        <div class="col-md-3 align-self-start">
+
+        </div>
+        <div class="col-md-9 ">
+            <img src="{% static "images/卡片元素-02.png" %}" width="100px;" style="float:right;"><br>
+            <p style="float:right;'">{{ unit.author }}</p>
+        </div>
+        <div class="col-md-8">
+            <h1 style="text-orientation: upright;writing-mode: vertical-lr;">{{ unit.title }}</h1><br>
+        </div>
+        <div class="col-md-4">
+            <img src="{{ unit.cover.cover.url }}" style="width: 200px;height: 400px;">
+        </div>
+        <div class="col-md-9">
+            <img src="{% static "images/卡片元素-05.png" %} " style="float:right;height: 100px;width: 100px">
+        </div>
+        <div class="col-md-3">
+            {{ unit.context }}
+        </div>
+        <div class="col-md-9">
+            <img src="{% static "images/卡片元素-04.png" %}" style="float:right;height: 100px;width: 100px"><br>
+        </div>
+        <div class="col-md-12">
+            <img src="{% static "images/卡片元素-07.png" %}" style="float:right;">
+        </div>
+
+    </div>
+</div>
+<button id="btnSave" class="btn btn-danger" onclick="screenshot()">Download screenshot</button>
+
+<script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function screenshot(){
+        html2canvas(document.getElementById('chart3')).then(function(canvas) {
+            document.body.appendChild(canvas);
+            var a = document.createElement('a');
+            a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+            a.download = 'image.jpg';
+            a.click();
+        });
+    }
+</script>
+
+</body>
