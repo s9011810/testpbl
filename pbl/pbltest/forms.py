@@ -1,6 +1,7 @@
 from django import forms
 from .models import UPCard, Card, User
 from django.utils import timezone
+from crispy_forms.helper import FormHelper
 
 
 class CardForm(forms.ModelForm):
@@ -94,3 +95,14 @@ class CreateCardForm(forms.ModelForm):
         model = Card
 
         fields = '__all__'
+
+
+class TestForm(forms.Form):
+    image_data = forms.CharField(widget=forms.HiddenInput(), required=False)
+
+    def __init__(self, *args, **kwargs):
+        self.helper = FormHelper()
+        self.helper.form_id = "agreement_form"
+        self.helper.form_method = 'post'
+
+        super(TestForm, self).__init__(*args, **kwargs)
