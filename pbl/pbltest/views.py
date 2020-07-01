@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
 from . import forms
 from .forms import CardForm, CreateCardForm
-from .models import UPCard, Card
+from .models import UPCard, Card, TestCard
 from easy_pdf.views import PDFTemplateView
 
 
@@ -53,7 +53,7 @@ def cardind(request):
 
 
 def card_manage(request):
-    up_cards = Card.objects.all()
+    up_cards = TestCard.objects.all()
     return render(request, 'card_manage.html', {
         'up_cards': up_cards
     })
@@ -138,4 +138,8 @@ def preview_card(request, pk):
     context = {
         'unit': unit
     }
+    test = TestCard()
+    if request.method == "POST":
+        test.base_img = request.POST.get('result1')
+        test.save()
     return render(request,  'final_card.html', context)

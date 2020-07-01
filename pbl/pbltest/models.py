@@ -46,6 +46,9 @@ class Card(models.Model):
         verbose_name_plural = "Card"
 
 
+class TestCard(models.Model):
+    base_img = models.TextField(null=True, blank=True)
+
 
 
 

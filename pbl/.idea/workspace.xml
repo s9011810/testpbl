@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e09d03d-6434-414c-a4bd-bdbf77abd121" name="Default Changelist" comment="" />
+    <list default="true" id="2e09d03d-6434-414c-a4bd-bdbf77abd121" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pbl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pbl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbl/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbl/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbl/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0002_auto_20200524_1418.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0003_auto_20200529_1422.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0004_usermes_activate_name.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0005_delete_usermes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0006_filecard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0007_upcard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0008_auto_20200609_2306.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0009_auto_20200609_2322.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0010_auto_20200609_2326.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0011_card.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0012_auto_20200612_0413.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0012_auto_20200617_0454.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0012_auto_20200617_1002.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0013_card_context1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0013_card_context2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0013_remove_card_group.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0014_auto_20200616_1721.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0014_auto_20200617_0527.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0014_auto_20200617_1003.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0015_auto_20200617_0530.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0015_upcard_class_material.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0016_auto_20200617_0531.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0017_auto_20200617_0532.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0018_remove_card_context1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0019_auto_20200617_0536.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0020_auto_20200617_0537.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0021_remove_card_context1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0022_card_context1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0023_remove_card_context1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Card/card_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/card_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Card/card_view_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/card_view_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Card/create_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/create_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/check_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/check_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/operations/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/operations/fields.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +61,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bpwTM9tzA0GqBG8n3CVLDUP0FL" />
   <component name="ProjectViewState">
@@ -145,6 +192,8 @@
       <workItem from="1593546355578" duration="5315000" />
       <workItem from="1593569709833" duration="3677000" />
       <workItem from="1593576415570" duration="2831000" />
+      <workItem from="1593932403244" duration="252000" />
+      <workItem from="1593932752103" duration="11876000" />
     </task>
     <servers />
   </component>
@@ -164,22 +213,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592364089081" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1592377229915">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1594017117376">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592377229915" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1592377229915">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594017117376" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1594017117375">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592377229915" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1592377229915">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594017117375" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1594017117375">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592377229915" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1592377229915">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594017117375" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1594017117375">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592377229915" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594017117375" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1590476319540">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

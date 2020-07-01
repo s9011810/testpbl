@@ -1,6 +1,7 @@
 {% block Cardtitle %}
     <title>卡片管理介面</title>
 {% endblock %}
+<script  src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <style>
     table.table-bordered > thead > tr > th{
   border:1px solid black;
@@ -9,6 +10,7 @@
         height: 300px;
     }
 </style>
+
     <img class="d-block w-100" style="height: 10em" src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg">
 <table class="table table-bordered">
     <thead >
@@ -19,13 +21,27 @@
     </thead>
 </table>
 {% block cardcontext %}
-
     <table class="table table-bordered table-dark">
         <tbody class="text-center">
             <tr class="team_work">
                 <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >第一組</a></th>
                      {% for up_card in up_cards %}
-                         <th scope="col"><a href="{% url 'change_card' pk=up_card.id %}"> <h3>卡片名稱:{{ up_card.title }}</h3><img src="{{ up_card.cover.cover.url }}" style="width: 300px;height: 300px"></a></th>
+                         {{ up_card.base_img }}
+                         <th scope="col" >
+                         <canvas id="chart3" width="200" height="100"></canvas>
+                         <script>
+                             var canvas = document.getElementById("chart3");
+                            var ctx = canvas.getContext("2d");
+                            var image = new Image();
+                            image.onload = function() {
+                                ctx.drawImage(image, 0, 0);
+                            };
+                            image.src="{{ up_card.base_img }}"
+                             alert(image.src)
+                         </script>
+
+
+                         </th>
                 {% endfor %}
             </tr>
         </tbody>

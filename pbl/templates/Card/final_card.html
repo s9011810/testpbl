@@ -44,14 +44,18 @@
 
 </body>
 <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
     function screenshot1(){
-        html2canvas(document.getElementById('chart3')).then(function(canvas) {
-            {#document.body.appendChild(canvas);#}
-            var a = document.createElement('a');
-            a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
-            a.download = {{ unit.title }} + ".jpg";
-            a.click();
+        html2canvas(document.getElementById('chart3')).then(canvas=> {
+              var result1 = canvas.toDataURL();
+             $.ajax({
+                type: 'POST',
+                url: '/preview_card/'+{{unit.id}},
+                data: { 'result1': result1 },
+            });
         });
+
     }
+
 </script>
