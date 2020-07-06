@@ -141,5 +141,6 @@ def preview_card(request, pk):
     test = TestCard()
     if request.method == "POST":
         test.base_img = request.POST.get('result1')
+        test.base_card_id = unit.pk
         test.save()
     return render(request,  'final_card.html', context)

@@ -27,7 +27,7 @@
                 <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >第一組</a></th>
                 {% for up_card in up_cards %}
                     <th scope="col">
-                            <img id="source" src="{{ up_card.base_img }}">
+                        <a href={% url 'change_card' pk=up_card.base_card.id %}> <img id="source" src="{{ up_card.base_img }}"></a>
                     </th>
                 {% endfor %}
             </tr>

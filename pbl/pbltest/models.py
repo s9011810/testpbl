@@ -17,7 +17,7 @@ class UPCard(models.Model):
     author = models.CharField(max_length=100)
     pdf = models.FileField(upload_to="media/card/img/")
     cover = models.ImageField(upload_to="card/covers/", null=True, blank=True)
-    class_material = models.CharField(max_length=100, default='test')
+    class_material = models.CharField(max_length=100, null=True)
 
     def __str__(self):
         return self.title
@@ -48,6 +48,7 @@ class Card(models.Model):
 
 class TestCard(models.Model):
     base_img = models.TextField(null=True, blank=True)
+    base_card = models.ForeignKey('Card', on_delete=models.CASCADE, null=True, blank=True)
 
 
 

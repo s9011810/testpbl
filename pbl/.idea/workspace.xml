@@ -43,7 +43,9 @@
       <change beforePath="$PROJECT_DIR$/templates/Card/card_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/card_index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Card/card_view_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/card_view_index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Card/create_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/create_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cardlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cardlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/check_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/check_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/part/content_uploadcard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/content_uploadcard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/operations/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/operations/fields.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,6 +198,7 @@
       <workItem from="1593932752103" duration="11876000" />
       <workItem from="1594017866624" duration="8087000" />
       <workItem from="1594053777204" duration="102000" />
+      <workItem from="1594084321004" duration="6578000" />
     </task>
     <servers />
   </component>

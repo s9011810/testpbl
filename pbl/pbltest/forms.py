@@ -43,7 +43,7 @@ class CardForm(forms.ModelForm):
         )
     )
     class_material = forms.ModelChoiceField(
-        queryset=UPCard.objects.filter(class_material='test'),
+        queryset=UPCard.objects.all(),
         widget=forms.Select(
             attrs={
                 'class': 'form-control',
