@@ -7,7 +7,7 @@
     </div>
         <div class="col-md-9 ">
             <img src="{% static "images/卡片元素-02.png" %}" width="100px;" style="float:right;"><br>
-            <p style="float:right;'">{{ unit.author }}</p>
+            <p style="float:right;'">{{ unit.author_id}}</p>
         </div>
     </div>
     <div class="row">
@@ -48,14 +48,13 @@
 <script type="text/javascript">
     function screenshot1(){
         html2canvas(document.getElementById('chart3')).then(canvas=> {
-              var result1 = canvas.toDataURL();
+              var result1 = canvas.toDataURL('image/jpeg');
              $.ajax({
                 type: 'POST',
                 url: '/preview_card/'+{{unit.id}},
                 data: { 'result1': result1 },
             });
         });
-
     }
 
 </script>

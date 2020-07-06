@@ -25,23 +25,10 @@
         <tbody class="text-center">
             <tr class="team_work">
                 <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >第一組</a></th>
-                     {% for up_card in up_cards %}
-                         {{ up_card.base_img }}
-                         <th scope="col" >
-                         <canvas id="chart3" width="200" height="100"></canvas>
-                         <script>
-                             var canvas = document.getElementById("chart3");
-                            var ctx = canvas.getContext("2d");
-                            var image = new Image();
-                            image.onload = function() {
-                                ctx.drawImage(image, 0, 0);
-                            };
-                            image.src="{{ up_card.base_img }}"
-                             alert(image.src)
-                         </script>
-
-
-                         </th>
+                {% for up_card in up_cards %}
+                    <th scope="col">
+                            <img id="source" src="{{ up_card.base_img }}">
+                    </th>
                 {% endfor %}
             </tr>
         </tbody>
