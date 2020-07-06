@@ -16,8 +16,8 @@ def post_card(request, pk):
     if request.method == "POST":
         card_form = forms.CreateCardForm(request.POST)
         if card_form.is_valid():
-            card_form.save()
-            url = reverse('preview_card', args=[pk])
+            final_card = card_form.save()
+            url = reverse('preview_card', args=[final_card.pk])
             return redirect(url)
     else:
         form = CreateCardForm()
