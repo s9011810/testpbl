@@ -71,25 +71,6 @@ class CreateCardForm(forms.ModelForm):
         }
     ))
 
-    author = forms.ModelChoiceField(
-        queryset=User.objects.filter(),
-        widget=forms.Select(
-            attrs={
-                'class': 'form-control',
-                'id': 'card-author',
-
-            }
-        )
-    )
-
-    cover = forms.ModelChoiceField(
-        queryset=UPCard.objects.filter(),
-        widget=forms.Select(
-            attrs={
-                'class': 'form-control',
-                'id': 'card-cover',
-            })
-    )
 
     class Meta:
         model = Card

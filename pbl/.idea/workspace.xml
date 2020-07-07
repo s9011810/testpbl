@@ -75,8 +75,10 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/card/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Scripts" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -199,6 +201,10 @@
       <workItem from="1594017866624" duration="8087000" />
       <workItem from="1594053777204" duration="102000" />
       <workItem from="1594084321004" duration="6578000" />
+      <workItem from="1594123601007" duration="6000" />
+      <workItem from="1594183605423" duration="1331000" />
+      <workItem from="1594185088388" duration="606000" />
+      <workItem from="1594188059465" duration="4352000" />
     </task>
     <servers />
   </component>
@@ -214,10 +220,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1592543431391" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1592364089081">
+    <state x="385" y="0" key="#pbl" timestamp="1594184963362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592364089081" />
+    <state x="385" y="0" key="#pbl/0.0.1366.728@0.0.1366.728" timestamp="1594184963362" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1594184016696">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594184016696" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1594017117376">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -250,11 +260,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590476319540" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1593165036718">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1594189736070">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1593165036718" />
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1593163051136" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594189736070" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592542019556">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
