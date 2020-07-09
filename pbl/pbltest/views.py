@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
 from . import forms
 from .forms import CardForm, CreateCardForm
-from .models import UPCard, Card, TestCard
+from .models import UPCard, Card, TestCard, row_Card
 from easy_pdf.views import PDFTemplateView
 
 
