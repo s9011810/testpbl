@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect, reverse
 from django.template.loader import get_template
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
-from . import forms
+from login.models import User
 from .forms import CardForm, CreateCardForm
 from .models import UPCard, Card, TestCard, row_Card
 from easy_pdf.views import PDFTemplateView
@@ -14,7 +14,7 @@ def post_card(request, pk):
     post = UPCard.objects.all()
     card = UPCard.objects.get(id=pk)
     if request.method == "POST":
-        card_form = forms.CreateCardForm(request.POST)
+        card_form = CreateCardForm(request.POST)
         if card_form.is_valid():
             final_card = card_form.save()
             url = reverse('preview_card', args=[final_card.pk])

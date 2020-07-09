@@ -42,14 +42,12 @@ class CardForm(forms.ModelForm):
             }
         )
     )
-    class_material = forms.ModelChoiceField(
-        queryset=UPCard.objects.all(),
-        widget=forms.Select(
-            attrs={
-                'class': 'form-control',
-                'id': 'class_material',
-            })
-    )
+    class_material = forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class': 'form-control',
+            'id': 'class_material',
+        }
+    ))
 
     class Meta:
         model = UPCard
@@ -70,7 +68,26 @@ class CreateCardForm(forms.ModelForm):
             'id': 'card-context',
         }
     ))
+    cover = forms.ModelChoiceField(
 
+        queryset=UPCard.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'card-cover',
+            }
+        )
+    )
+    author = forms.ModelChoiceField(
+
+        queryset=User.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'card-author',
+            }
+        )
+    )
 
     class Meta:
         model = Card

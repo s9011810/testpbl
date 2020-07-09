@@ -14,8 +14,8 @@ class FileCard(models.Model):
 
 class UPCard(models.Model):
     title = models.CharField(max_length=100)
-    author = models.CharField(max_length=100)
-    pdf = models.FileField(upload_to="media/card/img/")
+    author = models.ForeignKey('login.User', on_delete=models.CASCADE, null=True, blank=True)
+    pdf = models.FileField(upload_to="media/card/img/", null=True, blank=True)
     cover = models.ImageField(upload_to="card/covers/", null=True, blank=True)
     class_material = models.CharField(max_length=100, null=True)
 
@@ -27,6 +27,30 @@ class Card(models.Model):
     title = models.CharField(max_length=100)
     author = models.ForeignKey('login.User', on_delete=models.CASCADE, null=True, blank=True)
     context = models.TextField(blank=True)
+    created_date = models.CharField(max_length=500, null=True)
+    published_date = models.CharField(max_length=500, null=True)
+    cover = models.ForeignKey('UPCard', on_delete=models.CASCADE, null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+    def delete(self, *args, **kwargs):
+        self.cover.delete()
+        super().delete(*args, **kwargs)
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    class Meta:
+        verbose_name_plural = "Card"
+
+
+class row_Card(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.ForeignKey('login.User', on_delete=models.CASCADE, null=True, blank=True)
+    context = models.TextField(blank=True)
+    context1 = models.TextField(blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     cover = models.ForeignKey('UPCard', on_delete=models.CASCADE, null=True, blank=True)
@@ -43,7 +67,7 @@ class Card(models.Model):
         self.save()
 
     class Meta:
-        verbose_name_plural = "Card"
+        verbose_name_plural = "row_Card"
 
 
 class TestCard(models.Model):
