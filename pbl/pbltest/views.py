@@ -62,11 +62,9 @@ def index(request):
 
 
 def cardind(request):
-    up_cards = Card.objects.all()
-    textbook = UPCard.objects.all()
+    up_cards = UPCard.objects.all()
     context = {
         'up_cards': up_cards,
-        'textbook': textbook
     }
     return render(request, 'card_base.html', context)
 
@@ -91,6 +89,20 @@ def change_card(request, pk):
     return render(request, 'change_card.html', context)
 
 
+def change_card1(request, pk):
+    unit = RowCard.objects.get(id=pk)
+    card_form = RowCreateCardForm(request.POST or None, instance=unit)
+    context = {
+        'card_form': card_form,
+        'unit': unit,
+    }
+    if card_form.is_valid():
+        card_form.save()
+        return redirect('index')
+    return render(request, 'change_card1.html', context)
+
+
+
 def upload_card(request):
     context = {}
     if request.method == 'POST':
@@ -112,7 +124,6 @@ def card_list(request):
     context = {
         'form': form,
     }
-    request.session['lucky_number'] = 8
     return render(request, 'cardlist.html', context)
 
 
@@ -173,6 +184,6 @@ def preview_card1(request, pk):
     test = TestCard()
     if request.method == "POST":
         test.base_img = request.POST.get('result1')
-        test.base_card_id = unit.pk
+        test.base_card1_id = unit.pk
         test.save()
     return render(request,  'final_card1.html', context)

@@ -82,17 +82,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\pbl\templates" />
-      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
-      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\pbl\static\images" />
       <recent name="C:\Users\user\Desktop\pbl\templates" />
       <recent name="C:\Users\user\Desktop\pbl\pbltest" />
       <recent name="C:\Users\123\PycharmProjects\pbl" />
       <recent name="C:\Users\123\PycharmProjects\pbl\mysitepbl\static\images\webimages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\pbl\templates" />
+      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
+      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -213,6 +213,8 @@
       <workItem from="1594645753112" duration="4527000" />
       <workItem from="1594651477946" duration="6694000" />
       <workItem from="1594673314804" duration="437000" />
+      <workItem from="1594691428834" duration="945000" />
+      <workItem from="1594698838821" duration="3340000" />
     </task>
     <servers />
   </component>

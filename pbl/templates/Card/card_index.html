@@ -24,9 +24,14 @@
         <tbody class="text-center">
             <tr class="team_work">
                 <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >第一組</a></th>
-                     {% for textbook in textbook %}
-                         <th scope="col"><a href="{% url 'createcard' pk=textbook.id %}"> <h3>卡片名稱:{{ textbook.title }}</h3><img src="{{ textbook.cover.url }}" style="width: 300px;height: 300px"></a></th>
-                {% endfor %}
+                     {% for up_card in up_cards %}
+                         {{ up_card.class_material }}
+                         {% if up_card.class_material == '1' %}
+                            <th scope="col"><a href="{% url 'createcard' pk=up_card.id %}"> <h3>卡片名稱:{{ up_card.title }}</h3><img src="{{ up_card.cover.url }}" style="width: 300px;height: 300px"></a></th>
+                         {% elif up_card.class_material == '2' %}
+                             <th scope="col"><a href="{% url 'createcardrow' pk=up_card.id %}"> <h3>卡片名稱:{{ up_card.title }}</h3><img src="{{ up_card.cover.url }}" style="width: 300px;height: 300px"></a></th>
+                         {% endif %}
+                     {% endfor %}
             </tr>
         </tbody>
 

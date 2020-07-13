@@ -19,7 +19,12 @@
     </div>
       {% for up_card in up_cards %}
           <div class="card w-75 bg-dark text-white">
+            {% if up_card.base_card_id != null %}
                         <a href={% url 'change_card' pk=up_card.base_card_id %} class="text-center"> <img id="source" src="{{ up_card.base_img }}" width="300px" height="300px"></a>
+            {% elif up_card.base_card1_id != null%}
+                <a href={% url 'change_card1' pk=up_card.base_card1_id %} class="text-center"> <img id="source" src="{{ up_card.base_img }}" width="300px" height="300px"></a>
+            {% endif %}
+
           </div>
       {% endfor %}
 

@@ -72,7 +72,7 @@ class RowCard(models.Model):
 class TestCard(models.Model):
     base_img = models.TextField(null=True, blank=True)
     base_card = models.ForeignKey('Card', on_delete=models.CASCADE, null=True, blank=True)
-
+    base_card1 = models.ForeignKey('RowCard', on_delete=models.CASCADE, null=True, blank=True)
 
 
 
