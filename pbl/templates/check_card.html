@@ -6,22 +6,33 @@
     <div class="table-responsive">
         <a href={% url 'upload_card' %}><button class="btn-primary btn">上傳卡片</button></a>
 <table class="table mb-0">
-
+        <thead>
+            <tr>
+                <th>圖片</th>
+                <th>標題</th>
+                <th>作者</th>
+                <th>卡片格式</th>
+            </tr>
+        </thead>
         <tbody>
             {% for card in up_cards %}
                 <tr>
                     <td>
-                        {% if card.cover %}
+                        {% if card.cover and card.class_material == '1' %}
                             <a href="{% url 'createcard' pk=card.id %}"> <img style="width: 300px" src="{{ card.cover.url }}" alt="{{ card.title }}"></a>
+                        {% elif card.cover and card.class_material == '2' %}
+                            <a href="{% url 'createcardrow' pk=card.id %}"> <img style="width: 300px" src="{{ card.cover.url }}" alt="{{ card.title }}"></a>
                         {% endif %}
+
                     </td>
                     <td>{{ card.title }}</td>
                     <td>{{ card.author }}</td>
-                    <td><a href="{{ card.cover.url }}" class="btn btn-primary" target="_blank">Download</a> </td>
+                    <td>{{ card.class_material }}</td>
+                    <td><a href="{{ card.cover.url }}" class="btn btn-primary" target="_blank">下載圖片</a> </td>
                     <td>
                         <form method="post" action="{% url 'class_delete_card' card.pk %}">
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">刪除</button>
                     </form>
                     </td>
 

@@ -1,5 +1,5 @@
 from django import forms
-from .models import UPCard, Card, User
+from .models import UPCard, Card, User, RowCard
 from django.utils import timezone
 from crispy_forms.helper import FormHelper
 
@@ -92,6 +92,52 @@ class CreateCardForm(forms.ModelForm):
     class Meta:
         model = Card
 
+        fields = '__all__'
+
+
+class RowCreateCardForm(forms.ModelForm):
+    title = forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class': 'form-control',
+            'id': 'card-title',
+        }
+    ))
+
+    context = forms.CharField(widget=forms.Textarea(
+        attrs={
+            'class': 'form-control',
+            'id': 'card-context',
+        }
+    ))
+    context1 = forms.CharField(widget=forms.Textarea(
+        attrs={
+            'class': 'form-control',
+            'id': 'card-context',
+        }
+    ))
+    cover = forms.ModelChoiceField(
+
+        queryset=UPCard.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'card-cover',
+            }
+        )
+    )
+    author = forms.ModelChoiceField(
+
+        queryset=User.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'card-author',
+            }
+        )
+    )
+
+    class Meta:
+        model = RowCard
         fields = '__all__'
 
 

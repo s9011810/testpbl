@@ -5,8 +5,8 @@ from django.template.loader import get_template
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
 from login.models import User
-from .forms import CardForm, CreateCardForm
-from .models import UPCard, Card, TestCard, row_Card
+from .forms import CardForm, CreateCardForm, RowCreateCardForm
+from .models import UPCard, Card, TestCard, RowCard
 from easy_pdf.views import PDFTemplateView
 
 
@@ -27,6 +27,25 @@ def post_card(request, pk):
         'card': card,
     }
     return render(request, "create_card.html", context)
+
+
+def post_card1(request, pk):
+    post = UPCard.objects.all()
+    card = UPCard.objects.get(id=pk)
+    if request.method == "POST":
+        card_row_form = RowCreateCardForm(request.POST)
+        if card_row_form.is_valid():
+            final_card = card_row_form.save()
+            url = reverse('preview_card1', args=[final_card.pk])
+            return redirect(url)
+    else:
+        form = RowCreateCardForm()
+    context = {
+        'form': form,
+        'pk': pk,
+        'card': card,
+    }
+    return render(request, "create_card_row.html", context)
 
 
 def check_create_card(request):
@@ -61,7 +80,7 @@ def card_manage(request):
 
 def change_card(request, pk):
     unit = Card.objects.get(id=pk)
-    card_form = CreateCardForm(request.POST or None, instance = unit)
+    card_form = CreateCardForm(request.POST or None, instance=unit)
     context = {
         'card_form': card_form,
         'unit': unit,
@@ -135,6 +154,19 @@ def screen_shot(request):
 
 def preview_card(request, pk):
     unit = Card.objects.get(id=pk)
+    context = {
+        'unit': unit
+    }
+    test = TestCard()
+    if request.method == "POST":
+        test.base_img = request.POST.get('result1')
+        test.base_card_id = unit.pk
+        test.save()
+    return render(request,  'final_card.html', context)
+
+
+def preview_card1(request, pk):
+    unit = RowCard.objects.get(id=pk)
     context = {
         'unit': unit
     }

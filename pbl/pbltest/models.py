@@ -5,7 +5,6 @@ from django.utils import timezone
 
 from django.db.models import CASCADE
 
-
 class FileCard(models.Model):
     file_title = models.TextField()
     file_id = models.AutoField(primary_key=True)
@@ -46,7 +45,7 @@ class Card(models.Model):
         verbose_name_plural = "Card"
 
 
-class row_Card(models.Model):
+class RowCard(models.Model):
     title = models.CharField(max_length=100)
     author = models.ForeignKey('login.User', on_delete=models.CASCADE, null=True, blank=True)
     context = models.TextField(blank=True)
