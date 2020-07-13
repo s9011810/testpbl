@@ -175,4 +175,4 @@ def preview_card1(request, pk):
         test.base_img = request.POST.get('result1')
         test.base_card_id = unit.pk
         test.save()
-    return render(request,  'final_card.html', context)
+    return render(request,  'final_card1.html', context)

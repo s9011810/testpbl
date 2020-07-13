@@ -78,21 +78,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Scripts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\pbl\templates" />
+      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
+      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\pbl\static\images" />
       <recent name="C:\Users\user\Desktop\pbl\templates" />
       <recent name="C:\Users\user\Desktop\pbl\pbltest" />
       <recent name="C:\Users\123\PycharmProjects\pbl" />
       <recent name="C:\Users\123\PycharmProjects\pbl\mysitepbl\static\images\webimages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
-      <recent name="C:\Users\user\Desktop\pbl\templates" />
-      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
     </key>
   </component>
   <component name="RunManager">
@@ -212,6 +212,7 @@
       <workItem from="1594641361040" duration="2154000" />
       <workItem from="1594645753112" duration="4527000" />
       <workItem from="1594651477946" duration="6694000" />
+      <workItem from="1594673314804" duration="437000" />
     </task>
     <servers />
   </component>
