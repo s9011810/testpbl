@@ -21,7 +21,7 @@ def login(request):
         if login_form.is_valid():
             username = login_form.cleaned_data.get('username')
             password = login_form.cleaned_data.get('password')
-
+            identify = login_form.cleaned_data.get('identify')
             try:
                 user = models.User.objects.get(name=username)
             except :
@@ -32,7 +32,8 @@ def login(request):
                 request.session['is_login'] = True
                 request.session['user_id'] = user.id
                 request.session['user_name'] = user.name
-                return redirect('/index/')
+                request.session['user_identify'] = user.identify
+                return redirect('/index')
             else:
                 message = '密碼不正確！'
                 return render(request, 'login_base.html', locals())
@@ -86,10 +87,25 @@ def register(request):
 
 def logout(request):
     if not request.session.get('is_login', None):
-        return redirect("/index/")
+        return redirect('/index')
     request.session.flush()
     # 或者使用下面的方法
     # del request.session['is_login']
     # del request.session['user_id']
     # del request.session['user_name']
     return redirect("/index/")
+
+
+def create_class(request):
+    if request.session['user_identify'] == 'guest':
+        if request.method == 'POST':
+            class_form = form.ClassForm(request.POST)
+            if class_form.is_valid():
+                class_form.save()
+                return redirect('/')
+        else:
+            class_form = form.ClassForm()
+    context = {
+        'class_form': class_form,
+    }
+    return render(request, 'create_class.html', context)

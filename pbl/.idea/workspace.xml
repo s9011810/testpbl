@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e09d03d-6434-414c-a4bd-bdbf77abd121" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/create_class.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/pbl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pbl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbl/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbl/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbl/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/wsgi.py" afterDir="false" />
@@ -45,6 +49,7 @@
       <change beforePath="$PROJECT_DIR$/templates/Card/create_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/create_card.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cardlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cardlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/check_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/check_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login/register_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/register_login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/part/content_uploadcard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/content_uploadcard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/operations/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/operations/fields.py" afterDir="false" />
     </list>
@@ -73,6 +78,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -82,17 +88,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\pbl\templates" />
+      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
+      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\pbl\static\images" />
       <recent name="C:\Users\user\Desktop\pbl\templates" />
       <recent name="C:\Users\user\Desktop\pbl\pbltest" />
       <recent name="C:\Users\123\PycharmProjects\pbl" />
       <recent name="C:\Users\123\PycharmProjects\pbl\mysitepbl\static\images\webimages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\pbl\templates" />
-      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
-      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -215,6 +221,9 @@
       <workItem from="1594673314804" duration="437000" />
       <workItem from="1594691428834" duration="945000" />
       <workItem from="1594698838821" duration="3340000" />
+      <workItem from="1594703773864" duration="1890000" />
+      <workItem from="1594710056445" duration="5425000" />
+      <workItem from="1594743777138" duration="7666000" />
     </task>
     <servers />
   </component>
@@ -226,10 +235,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1592364583303" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592543431391">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594703831931">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1592543431391" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594703831931" />
     <state x="385" y="0" key="#pbl" timestamp="1594184963362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

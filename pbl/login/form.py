@@ -1,4 +1,5 @@
 from django import forms
+from .models import Group, CreateActivate, CreateClass
 
 
 class UserForm(forms.Form):
@@ -17,4 +18,49 @@ class RegisterForm(forms.Form):
     password1 = forms.CharField(label="密碼", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     password2 = forms.CharField(label="確認密碼", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
     email = forms.EmailField(label="email", widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    identify = forms.ChoiceField(label='身分', choices=gender)
+    identify = forms.ChoiceField(label='身分', choices=gender, widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'login-identyfy',
+            }
+        ))
+    group = forms.ModelChoiceField(
+        queryset=Group.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'login-group',
+            }
+        )
+    )
+
+
+class GroupForm(forms.Form):
+    groupname = forms.CharField(label="群組名稱", max_length=128, widget=forms.TextInput(attrs={'class': 'form-control'}))
+
+
+class ClassForm(forms.ModelForm):
+    class_title = forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class': 'form-control',
+            'id': 'class_title',
+        }
+    ))
+
+    class Meta:
+        model = CreateClass
+
+        fields = '__all__'
+
+
+class ActivateForm(forms.ModelForm):
+    activate_name = forms.CharField(label="活動名稱", max_length=128, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    class_id = forms.ModelChoiceField(
+        queryset=CreateClass.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'activate_name',
+            }
+        )
+    )

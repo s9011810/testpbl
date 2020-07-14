@@ -42,7 +42,8 @@ urlpatterns = [
     path('createcardrow/<int:pk>', post_card1, name='createcardrow'),
     path('preview_card/<int:pk>', preview_card, name='preview_card'),
     path('preview_card1/<int:pk>', preview_card1, name='preview_card1'),
-    path('changecard1/<int:pk>', change_card1, name='change_card1')
+    path('changecard1/<int:pk>', change_card1, name='change_card1'),
+    path('createclass', views.create_class, name='create_class')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
