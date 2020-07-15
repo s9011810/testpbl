@@ -14,7 +14,7 @@ def index(request):
 
 def login(request):
     if request.session.get('is_login', None):  # 不允许重复登录
-        return redirect('/index/')
+        return redirect('index')
     if request.method == 'POST':
         login_form = form.UserForm(request.POST)
         message = '請檢查內容！'
@@ -33,7 +33,7 @@ def login(request):
                 request.session['user_id'] = user.id
                 request.session['user_name'] = user.name
                 request.session['user_identify'] = user.identify
-                return redirect('/index')
+                return redirect('index')
             else:
                 message = '密碼不正確！'
                 return render(request, 'login_base.html', locals())
@@ -78,7 +78,7 @@ def register(request):
                 new_user.sex = sex
                 new_user.save()
 
-                return redirect('/login/')
+                return redirect('login')
         else:
             return render(request, 'register_base.html', locals())
     register_form = form.RegisterForm()
@@ -87,13 +87,13 @@ def register(request):
 
 def logout(request):
     if not request.session.get('is_login', None):
-        return redirect('/index')
+        return redirect('index')
     request.session.flush()
     # 或者使用下面的方法
     # del request.session['is_login']
     # del request.session['user_id']
     # del request.session['user_name']
-    return redirect("/index/")
+    return redirect("index")
 
 
 def create_class(request):
@@ -102,7 +102,7 @@ def create_class(request):
             class_form = form.ClassForm(request.POST)
             if class_form.is_valid():
                 class_form.save()
-                return redirect('/')
+                return redirect('index')
         else:
             class_form = form.ClassForm()
     context = {
