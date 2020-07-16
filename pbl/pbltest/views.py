@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect, reverse
 from django.template.loader import get_template
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
-from login.models import User
+from login.models import CreateClass
 from .forms import CardForm, CreateCardForm, RowCreateCardForm
 from .models import UPCard, Card, TestCard, RowCard
 from easy_pdf.views import PDFTemplateView
@@ -56,9 +56,10 @@ def check_create_card(request):
 
 
 def index(request):
-    template = get_template('index.html')
-    index_html = template.render(locals())
-    return HttpResponse(index_html)
+    create_class = CreateClass.objects.all()
+    context = {'create_class': create_class}
+    print(context)
+    return render(request, 'index.html', context)
 
 
 def cardind(request):

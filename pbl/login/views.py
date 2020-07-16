@@ -8,8 +8,9 @@ from django.shortcuts import redirect
 
 
 def index(request):
-    pass
-    return render(request, 'index.html')
+    create_class = models.CreateClass.objects.all()
+    context = {'create_class': create_class}
+    return render(request, 'index.html', context)
 
 
 def login(request):

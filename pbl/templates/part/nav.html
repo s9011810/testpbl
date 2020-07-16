@@ -31,6 +31,12 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">個人資訊設定</a>
+                </li>
+                  {% if request.session.user_name %}
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/createclass">建立教室</a>
+                </li>
+                  {% endif %}
               </ul>
              <ul class="navbar-nav">
                 <li class="nav-item ">

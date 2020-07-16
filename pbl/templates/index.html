@@ -3,6 +3,8 @@
     <title>劇本雲-首頁</title>
 {% endblock %}
 {% block content %}
+    {% if  request.session.user_name != null %}
     <h1>{{ request.session.user_name }}! 哈囉！</h1>
-    {% include "part/content.html" %}
+    {% endif %}
+    {% include "part/content.html" with create_class=create_class  %}
 {% endblock %}

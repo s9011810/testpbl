@@ -1,9 +1,10 @@
 from django.db import models
-from login.models import User
+from login.models import User, CreateClass, CreateActivate, Group
 from django.utils import timezone
 # Create your models here.
 
 from django.db.models import CASCADE
+
 
 class FileCard(models.Model):
     file_title = models.TextField()
@@ -29,7 +30,8 @@ class Card(models.Model):
     created_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     published_date = models.DateTimeField(auto_now=True, null=True, blank=True)
     cover = models.ForeignKey('UPCard', on_delete=models.CASCADE, null=True, blank=True)
-
+    # group = models.ForeignKey('Group', on_delete=models.CASCADE, null=True, blank=True)
+    # activate = models.ForeignKey('', on_delete=models.CASCADE, null=True, blank=True)
     def __str__(self):
         return self.title
 

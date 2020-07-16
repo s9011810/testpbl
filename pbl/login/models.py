@@ -6,7 +6,7 @@ from django.db import models
 class User(models.Model):
 
     gender = (
-        ('guest', "訪客"),
+        ('guest', "學員"),
         ('teacher', "引導師"),
     )
 
@@ -33,6 +33,7 @@ class Group(models.Model):
 class CreateActivate(models.Model):
     activate_name = models.CharField(max_length=128, unique=True, null=True, blank=True)
     class_id = models.ForeignKey('CreateClass', on_delete=models.CASCADE, blank=True, null=True)
+    group = models.ManyToManyField(Group, blank=True, related_name='user_group')
 
 
 class CreateClass(models.Model):
