@@ -2,56 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e09d03d-6434-414c-a4bd-bdbf77abd121" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/create_class.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pbl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pbl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbl/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbl/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbl/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0002_auto_20200524_1418.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0003_auto_20200529_1422.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0004_usermes_activate_name.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0005_delete_usermes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0006_filecard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0007_upcard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0008_auto_20200609_2306.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0009_auto_20200609_2322.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0010_auto_20200609_2326.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0011_card.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0012_auto_20200612_0413.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0012_auto_20200617_0454.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0012_auto_20200617_1002.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0013_card_context1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0013_card_context2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0013_remove_card_group.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0014_auto_20200616_1721.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0014_auto_20200617_0527.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0014_auto_20200617_1003.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0015_auto_20200617_0530.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0015_upcard_class_material.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0016_auto_20200617_0531.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0017_auto_20200617_0532.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0018_remove_card_context1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0019_auto_20200617_0536.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0020_auto_20200617_0537.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0021_remove_card_context1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0022_card_context1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/migrations/0023_remove_card_context1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbltest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Card/card_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/card_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Card/card_view_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/card_view_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Card/create_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/create_card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cardlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cardlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/check_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/check_card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login/register_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/register_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/part/content_uploadcard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/content_uploadcard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/operations/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/operations/fields.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Card/final_card1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/final_card1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,21 +35,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\pbl\templates" />
-      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
-      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\pbl\static\images" />
       <recent name="C:\Users\user\Desktop\pbl\templates" />
       <recent name="C:\Users\user\Desktop\pbl\pbltest" />
       <recent name="C:\Users\123\PycharmProjects\pbl" />
       <recent name="C:\Users\123\PycharmProjects\pbl\mysitepbl\static\images\webimages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\pbl" />
+      <recent name="C:\Users\user\Desktop\pbl\templates" />
+      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
+      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -227,6 +179,8 @@
       <workItem from="1594790716836" duration="2895000" />
       <workItem from="1594808532295" duration="1966000" />
       <workItem from="1594878740747" duration="2347000" />
+      <workItem from="1594929453243" duration="76000" />
+      <workItem from="1594930834451" duration="178000" />
     </task>
     <servers />
   </component>
