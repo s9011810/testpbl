@@ -13,6 +13,7 @@
       <change beforePath="$PROJECT_DIR$/pbltest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbltest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Card/create_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/create_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Card/create_card_row.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/create_card_row.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Card/final_card1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/final_card1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cardlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cardlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
@@ -208,6 +209,7 @@
       <workItem from="1595320093964" duration="11253000" />
       <workItem from="1595356451445" duration="15000" />
       <workItem from="1595356475795" duration="386000" />
+      <workItem from="1595385661641" duration="421000" />
     </task>
     <servers />
   </component>

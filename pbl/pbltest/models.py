@@ -54,6 +54,7 @@ class RowCard(models.Model):
     author = models.ForeignKey('login.User', on_delete=models.CASCADE, null=True, blank=True)
     context = models.TextField(blank=True)
     context1 = models.TextField(blank=True)
+    context2 = models.TextField(blank=True)
     created_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     published_date = models.DateTimeField(auto_now=True, null=True, blank=True)
     cover = models.ForeignKey('UPCard', on_delete=models.CASCADE, null=True, blank=True)

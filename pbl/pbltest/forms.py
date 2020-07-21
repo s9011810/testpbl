@@ -125,7 +125,13 @@ class RowCreateCardForm(forms.ModelForm):
             'id': 'card-context',
         }
     ))
-    context1 = forms.CharField(widget=forms.Textarea(
+    context1 = forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class': 'form-control',
+            'id': 'card-context',
+        }
+    ))
+    context2 = forms.CharField(widget=forms.Textarea(
         attrs={
             'class': 'form-control',
             'id': 'card-context',
