@@ -43,7 +43,9 @@ urlpatterns = [
     path('preview_card/<int:pk>', preview_card, name='preview_card'),
     path('preview_card1/<int:pk>', preview_card1, name='preview_card1'),
     path('changecard1/<int:pk>', change_card1, name='change_card1'),
-    path('createclass', views.create_class, name='create_class')
+    path('createclass', views.create_class, name='create_class'),
+    path('activate_view/<int:pk>', views.view_activate, name='view_activate'),
+    path('creatactivate', views.create_activate, name='create_activate')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

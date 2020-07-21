@@ -55,12 +55,7 @@ class ClassForm(forms.ModelForm):
 
 class ActivateForm(forms.ModelForm):
     activate_name = forms.CharField(label="活動名稱", max_length=128, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    class_id = forms.ModelChoiceField(
-        queryset=CreateClass.objects.all(),
-        widget=forms.Select(
-            attrs={
-                'class': 'form-control',
-                'id': 'activate_name',
-            }
-        )
-    )
+
+    class Meta:
+        model = CreateActivate
+        fields = '__all__'

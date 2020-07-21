@@ -3,15 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="2e09d03d-6434-414c-a4bd-bdbf77abd121" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbl/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbl/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbl/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbl/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbltest/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbltest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbltest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Card/create_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/create_card.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Card/final_card1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/final_card1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cardlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cardlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/part/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/part/content_card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/part/content_uploadcard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/content_uploadcard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/part/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/nav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +204,10 @@
       <workItem from="1594963943201" duration="188000" />
       <workItem from="1595165721055" duration="3508000" />
       <workItem from="1595230221670" duration="3142000" />
-      <workItem from="1595269435247" duration="5856000" />
+      <workItem from="1595269435247" duration="6593000" />
+      <workItem from="1595320093964" duration="11253000" />
+      <workItem from="1595356451445" duration="15000" />
+      <workItem from="1595356475795" duration="386000" />
     </task>
     <servers />
   </component>
@@ -221,22 +231,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594184016696" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1595299764465">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1595301811039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595299764465" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1595299764464">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595301811039" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1595301811039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595299764464" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1595299764462">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595301811039" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1595301811039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595299764462" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1595299764464">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595301811039" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1595301811039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595299764464" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595301811039" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1595233956507">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -262,10 +272,10 @@
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1593165036718" />
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595299730265" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1595231652721">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1595355449191">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595231652721" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595355449191" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

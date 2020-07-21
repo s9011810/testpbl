@@ -1,4 +1,5 @@
 from django import forms
+from login.models import CreateActivate, CreateClass
 from .models import UPCard, Card, User, RowCard
 from django.utils import timezone
 
@@ -47,6 +48,16 @@ class CardForm(forms.ModelForm):
             'id': 'class_material',
         }
     ))
+    activate_id = forms.ModelChoiceField(
+        queryset=CreateActivate.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-controll form-control',
+                'id': 'activate_id',
+
+            }
+        )
+    )
 
     class Meta:
         model = UPCard
@@ -65,6 +76,12 @@ class CreateCardForm(forms.ModelForm):
         attrs={
             'class': 'form-control',
             'id': 'card-context',
+        }
+    ))
+    context1 = forms.CharField(widget=forms.Textarea(
+        attrs={
+            'class': 'form-control',
+            'id': 'card-context1',
         }
     ))
     cover = forms.ModelChoiceField(

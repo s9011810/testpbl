@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block create_activate %}
+    <div class="container" style="margin-top: 50px" xmlns="http://www.w3.org/1999/html">
+			<div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    <form method="POST" class="post-form">
+                        {% csrf_token %}
+                        <label for="activate_name"> 創建活動名稱:</label>
+                        {{ activate.activate_name }}
+                        <label for="class_id"> 選擇創建名稱:</label>
+                        <div class="form-group">
+                            <label for="activte-class_id"> 選擇教室:</label>
+                            <select id="class_id" name="class_id">
+                                {% for class_c in class_c %}
+                                <option value="{{ class_c.id }}">{{ class_c.class_title }}</option>
+
+                            {% endfor %}
+                            </select>
+                        </div>
+                         <button type="submit" class="btn btn-success">建立</button>
+                    </form>
+                </div>
+            </div>
+    </div>
+{% endblock %}

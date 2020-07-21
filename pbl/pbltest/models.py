@@ -18,6 +18,8 @@ class UPCard(models.Model):
     pdf = models.FileField(upload_to="media/card/img/", null=True, blank=True)
     cover = models.ImageField(upload_to="card/covers/", null=True, blank=True)
     class_material = models.CharField(max_length=100, null=True)
+    group = models.ForeignKey('login.Group', on_delete=models.CASCADE, null=True, blank=True)
+    activate = models.ForeignKey('login.CreateActivate', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -27,11 +29,11 @@ class Card(models.Model):
     title = models.CharField(max_length=100)
     author = models.ForeignKey('login.User', on_delete=models.CASCADE, null=True, blank=True)
     context = models.TextField(blank=True)
+    context1 = models.TextField(blank=True)
     created_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     published_date = models.DateTimeField(auto_now=True, null=True, blank=True)
     cover = models.ForeignKey('UPCard', on_delete=models.CASCADE, null=True, blank=True)
-    # group = models.ForeignKey('Group', on_delete=models.CASCADE, null=True, blank=True)
-    # activate = models.ForeignKey('', on_delete=models.CASCADE, null=True, blank=True)
+
     def __str__(self):
         return self.title
 

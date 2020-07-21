@@ -28,6 +28,7 @@ class User(models.Model):
 
 class Group(models.Model):
     group = models.CharField(max_length=128, unique=True, null=True, blank=True)
+    user_id = models.ManyToManyField(User, blank=True, related_name='user_group')
 
 
 class CreateActivate(models.Model):

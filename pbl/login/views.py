@@ -8,8 +8,8 @@ from django.shortcuts import redirect
 
 
 def index(request):
-    create_class = models.CreateClass.objects.all()
-    context = {'create_class': create_class}
+    test_class = models.CreateClass.objects.all()
+    context = {'create_class': test_class}
     return render(request, 'index.html', context)
 
 
@@ -103,10 +103,35 @@ def create_class(request):
             class_form = form.ClassForm(request.POST)
             if class_form.is_valid():
                 class_form.save()
-                return redirect('index')
+                return redirect('create_activate')
         else:
             class_form = form.ClassForm()
     context = {
         'class_form': class_form,
     }
     return render(request, 'create_class.html', context)
+
+
+def create_activate(request):
+    class_c = models.CreateClass.objects.all()
+    if request.method == 'POST':
+        activate = form.ActivateForm(request.POST)
+        if activate.is_valid():
+            activate.save()
+            return redirect('index')
+    else:
+        activate = form.ActivateForm()
+    context = {
+        'class_c': class_c,
+        'activate': activate,
+    }
+    return render(request, 'create_activate.html', context)
+
+
+def view_activate(request, pk):
+    activte_a = models.CreateActivate.objects.get(id=pk)
+    context = {
+        'activate_a': activte_a,
+        'pk': pk
+    }
+    return render(request, 'view_activate.html', context)

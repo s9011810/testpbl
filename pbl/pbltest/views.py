@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect, reverse
 from django.template.loader import get_template
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
-from login.models import CreateClass
+from login.models import CreateClass, CreateActivate
 from .forms import CardForm, CreateCardForm, RowCreateCardForm
 from .models import UPCard, Card, TestCard, RowCard
 from easy_pdf.views import PDFTemplateView
@@ -58,7 +58,6 @@ def check_create_card(request):
 def index(request):
     create_class = CreateClass.objects.all()
     context = {'create_class': create_class}
-    print(context)
     return render(request, 'index.html', context)
 
 
@@ -103,9 +102,9 @@ def change_card1(request, pk):
     return render(request, 'change_card1.html', context)
 
 
-
 def upload_card(request):
-    context = {}
+    activate_a = CreateActivate.objects.all()
+    context = {'activate_a': activate_a}
     if request.method == 'POST':
         upload_file = request.FILES['document']
         fs = FileSystemStorage()
