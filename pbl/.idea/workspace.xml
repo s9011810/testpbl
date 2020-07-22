@@ -16,6 +16,7 @@
       <change beforePath="$PROJECT_DIR$/templates/Card/create_card_row.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/create_card_row.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Card/final_card1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/final_card1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cardlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cardlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/final_card1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/final_card1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/part/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/part/content_card.html" beforeDir="false" />
@@ -210,6 +211,7 @@
       <workItem from="1595356451445" duration="15000" />
       <workItem from="1595356475795" duration="386000" />
       <workItem from="1595385661641" duration="421000" />
+      <workItem from="1595386186546" duration="1300000" />
     </task>
     <servers />
   </component>

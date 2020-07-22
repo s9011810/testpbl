@@ -33,9 +33,9 @@ def post_card1(request, pk):
     post = UPCard.objects.all()
     card = UPCard.objects.get(id=pk)
     if request.method == "POST":
-        card_row_form = RowCreateCardForm(request.POST)
-        if card_row_form.is_valid():
-            final_card = card_row_form.save()
+        card_form = RowCreateCardForm(request.POST)
+        if card_form.is_valid():
+            final_card = card_form.save()
             url = reverse('preview_card1', args=[final_card.pk])
             return redirect(url)
     else:
