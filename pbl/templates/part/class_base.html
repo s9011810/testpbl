@@ -1,0 +1,5 @@
+{% block classbase %}
+{% for create_class in create_class %}
+        <td><a href={% url 'view_activate' pk=create_class.id %}><h4>{{ create_class.class_title }}</h4></a></td>
+{% endfor %}
+{% endblock %}

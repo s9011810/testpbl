@@ -14,7 +14,7 @@
                         <label for="class_id"> 選擇創建名稱:</label>
                         <div class="form-group">
                             <label for="activte-class_id"> 選擇教室:</label>
-                            <select id="class_id" name="class_id">
+                            <select id="class_id" name="class_id" class="form-control">
                                 {% for class_c in class_c %}
                                 <option value="{{ class_c.id }}">{{ class_c.class_title }}</option>
 

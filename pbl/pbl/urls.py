@@ -17,10 +17,10 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path, include
-from pbltest.views import index
 from login import views
 from pbltest.views import cardind, upload_card, card_list, CardListView, CreateView, delete_card, UploadView, post_card, change_card, card_manage, screen_shot, check_card, preview_card, post_card1, preview_card1, change_card1
 from easy_pdf.views import PDFTemplateView
+from django.contrib.auth.views import LoginView
 
 
 urlpatterns = [
@@ -45,7 +45,8 @@ urlpatterns = [
     path('changecard1/<int:pk>', change_card1, name='change_card1'),
     path('createclass', views.create_class, name='create_class'),
     path('activate_view/<int:pk>', views.view_activate, name='view_activate'),
-    path('creatactivate', views.create_activate, name='create_activate')
-]
+    path('creatactivate', views.create_activate, name='create_activate'),
+    path('creategroup', views.create_group, name='create_group'),
+ ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

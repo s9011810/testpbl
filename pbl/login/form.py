@@ -59,3 +59,11 @@ class ActivateForm(forms.ModelForm):
     class Meta:
         model = CreateActivate
         fields = '__all__'
+
+
+class CreateGroup(forms.ModelForm):
+    group = forms.CharField(label="群組名稱", max_length=128, widget=forms.TextInput(attrs={'class': 'form-control'}))
+
+    class Meta:
+        model = Group
+        fields = '__all__'

@@ -5,6 +5,7 @@ from login import models
 from django.shortcuts import redirect
 
 # Create your views here.
+from .models import Group
 
 
 def index(request):
@@ -103,7 +104,7 @@ def create_class(request):
             class_form = form.ClassForm(request.POST)
             if class_form.is_valid():
                 class_form.save()
-                return redirect('create_activate')
+                return redirect('index')
         else:
             class_form = form.ClassForm()
     context = {
@@ -129,9 +130,30 @@ def create_activate(request):
 
 
 def view_activate(request, pk):
-    activte_a = models.CreateActivate.objects.get(id=pk)
+    # activte_a = models.CreateActivate.objects.get(class_id=pk)
     context = {
-        'activate_a': activte_a,
+        # 'activate_a': activte_a,
         'pk': pk
     }
     return render(request, 'view_activate.html', context)
+
+
+def create_group(request):
+    user_a = models.User.objects.all()
+    if request.method == 'POST':
+        group = form.CreateGroup(request.POST)
+        tests = request.POST.getlist('check_box_list')
+        if group.is_valid():
+            obj:Group()
+            obj = group.save()
+            for t in tests:
+                obj.group_user.add(t)
+                obj.save()
+            return redirect('index')
+    else:
+        group = form.CreateGroup()
+    context = {
+        'user_a': user_a,
+        'group': group,
+    }
+    return render(request, 'create_group.html', context)

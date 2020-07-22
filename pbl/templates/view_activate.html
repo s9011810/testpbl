@@ -7,10 +7,10 @@
 				<div class="col-md-12">
     <table class="table table-bordered" style="margin-top:50px;">
     <tr>
-        <td><a href={% url 'card' %}>{{ activate_a.activate_name }}</a></td>
-{#    {% for activate_a1 in activate_a %}#}
-{#        <td><a href={% url 'card' %}><h4>{{ activate_a1.activate_name}}</h4></a></td>#}
-{#    {% endfor %}#}
+        <td><a href={% url 'create_activate' %}>創建活動</a></td>
+   {% for activate_a1 in activate %}
+       <td><a href={% url 'card' %}><h4>{{ activate_a1.activate_name}}</h4></a></td>#}
+   {% endfor %}
     </tr>
     </table>
                 </div>
