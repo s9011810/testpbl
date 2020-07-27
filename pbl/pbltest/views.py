@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect, reverse
 from django.template.loader import get_template
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
-from login.models import CreateClass, CreateActivate
+from login.models import CreateClass, CreateActivate, Group
 from .forms import CardForm, CreateCardForm, RowCreateCardForm
 from .models import UPCard, Card, TestCard, RowCard
 from easy_pdf.views import PDFTemplateView
@@ -61,10 +61,13 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-def cardind(request):
+def cardind(request, pk):
+    group = Group.objects.all()
     up_cards = UPCard.objects.all()
     context = {
+        'group': group,
         'up_cards': up_cards,
+        'pk': pk
     }
     return render(request, 'card_base.html', context)
 

@@ -23,7 +23,8 @@
     <table class="table table-bordered table-dark">
         <tbody class="text-center">
             <tr class="team_work">
-                <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >第一組</a></th>
+            {% for group_a in group %}
+                <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >{{ group_a.group }}</a></th>
                      {% for up_card in up_cards %}
                          {{ up_card.class_material }}
                          {% if up_card.class_material == '1' %}
@@ -32,16 +33,8 @@
                              <th scope="col"><a href="{% url 'createcardrow' pk=up_card.id %}"> <h3>卡片名稱:{{ up_card.title }}</h3><img src="{{ up_card.cover.url }}" style="width: 300px;height: 300px"></a></th>
                          {% endif %}
                      {% endfor %}
-            </tr>
-        </tbody>
-
-     <tbody class="text-center">
-            <tr class="team_work">
-                <th scope="col" style="padding-bottom: 10%">第二組</th>
-                <th scope="col">st1</th>
-                <th scope="col">st2</th>
-                <th scope="col">st3</th>
-            </tr>
+                        </tr>
+            {% endfor %}
         </tbody>
     </table>
 {% endblock %}

@@ -14,6 +14,14 @@
                                 <input type="checkbox" value="{{ user_a1.id }}" name="check_box_list">{{ user_a1.name }}
                             {% endfor %}
                         </div>
+                    <div class="form-group">
+                            <label for="user_id"> 選擇activate:</label>
+                    <select id="activate_id" name="activate_id" class="form-control">
+                                {% for activate_a1 in activate_a %}
+                                <option value="{{ activate_a1.id }}">{{ activate_a1.activate_name }}
+                            {% endfor %}
+                    </select>
+                        </div>
                     <button type="submit" class="btn btn-success">建立</button>
                     </form>
                 </div>

@@ -15,7 +15,7 @@ class User(models.Model):
     email = models.EmailField(unique=True)
     identify = models.CharField(max_length=123, choices=gender, default='guest')
     c_time = models.DateTimeField(auto_now_add=True)
-    #group = models.ForeignKey('Group',  on_delete=models.CASCADE, blank=True, null=True)
+    # group = models.ForeignKey('Group',  on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -29,12 +29,19 @@ class User(models.Model):
 class Group(models.Model):
     group = models.CharField(max_length=128, null=True, blank=True)
     group_user = models.ManyToManyField(User, blank=True, related_name='user_user')
+    activate = models.ForeignKey('CreateActivate', on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return self.group
 
 
 class CreateActivate(models.Model):
     activate_name = models.CharField(max_length=128, unique=True, null=True, blank=True)
     class_id = models.ForeignKey('CreateClass', on_delete=models.CASCADE, blank=True, null=True)
-    group = models.ManyToManyField(Group, blank=True, related_name='user_group')
+    # group = models.ManyToManyField(Group, blank=True, related_name='user_group')
+
+    def __str__(self):
+        return self.activate_name
 
 
 class CreateClass(models.Model):

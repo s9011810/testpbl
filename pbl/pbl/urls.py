@@ -26,10 +26,10 @@ from django.contrib.auth.views import LoginView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('login/', views.login),
-    path('logout/', views.logout),
-    path('register/', views.register),
-    path('card', cardind, name='card'),
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
+    path('register/', views.register, name='register'),
+    path('card/<int:pk>', cardind, name='card'),
     path('upload_card/', UploadView.as_view(), name='upload_card'),
     path('class/card_list/<int:pk>', delete_card, name='class_delete_card'),
     path('checkcard/', CardListView.as_view(), name='check_card'),
@@ -46,7 +46,8 @@ urlpatterns = [
     path('createclass', views.create_class, name='create_class'),
     path('activate_view/<int:pk>', views.view_activate, name='view_activate'),
     path('creatactivate', views.create_activate, name='create_activate'),
-    path('creategroup', views.create_group, name='create_group'),
+    path('creategroup/<int:pk>', views.create_group, name='create_group'),
+    path('group_view/<int:pk>', views.view_group, name='view_group'),
  ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

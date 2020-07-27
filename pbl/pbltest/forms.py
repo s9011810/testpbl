@@ -1,5 +1,5 @@
 from django import forms
-from login.models import CreateActivate, CreateClass
+from login.models import CreateActivate, CreateClass, Group
 from .models import UPCard, Card, User, RowCard
 from django.utils import timezone
 
@@ -48,12 +48,22 @@ class CardForm(forms.ModelForm):
             'id': 'class_material',
         }
     ))
-    activate_id = forms.ModelChoiceField(
+    activate = forms.ModelChoiceField(
         queryset=CreateActivate.objects.all(),
         widget=forms.Select(
             attrs={
                 'class': 'form-controll form-control',
-                'id': 'activate_id',
+                'id': 'activate',
+
+            }
+        )
+    )
+    group = forms.ModelChoiceField(
+        queryset=Group.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'group',
 
             }
         )
@@ -154,6 +164,27 @@ class RowCreateCardForm(forms.ModelForm):
             attrs={
                 'class': 'form-control',
                 'id': 'card-author',
+            }
+        )
+    )
+
+    activte = forms.ModelChoiceField(
+
+        queryset=CreateActivate.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'card-activate',
+            }
+        )
+    )
+    group = forms.ModelChoiceField(
+
+        queryset=Group.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'card-group',
             }
         )
     )

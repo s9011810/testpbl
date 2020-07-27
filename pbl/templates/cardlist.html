@@ -23,7 +23,21 @@
                                 <option value="2">橫式</option>
         </select>
         <label for="activate_id">活動</label>
-        {{ form.activate_id }}
+{#    {{ activate_a }}#}
+{#    <select id="activate_id" name="activate_id" class="form-control">#}
+{#        {% for actitvate_a1 in activate_a %}#}
+{#            <option value="{{ actitvate_a1.id }}">123</option>#}
+{#        {% endfor %}#}
+{#    </select>#}
+    {{ form.activate }}
+        <label for="group_id">群組</label>
+{#    {{ group_a }}#}
+{#    <select id="group_id" name="group_id" class="form-control">#}
+{#        {% for group_a1 in group_a %}#}
+{#             <option value="{{ group_a1.id }}">123</option>#}
+{#        {% endfor %}#}
+{#    </select>#}
+        {{ form.group }}
         <!--</div>-->
 	</div>
 	<div class="text-center">

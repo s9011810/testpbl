@@ -33,6 +33,8 @@ class Card(models.Model):
     created_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     published_date = models.DateTimeField(auto_now=True, null=True, blank=True)
     cover = models.ForeignKey('UPCard', on_delete=models.CASCADE, null=True, blank=True)
+    group = models.ForeignKey('login.Group', on_delete=models.CASCADE, null=True, blank=True)
+    activate = models.ForeignKey('login.CreateActivate', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.title

@@ -24,15 +24,6 @@ class RegisterForm(forms.Form):
                 'id': 'login-identyfy',
             }
         ))
-    group = forms.ModelChoiceField(
-        queryset=Group.objects.all(),
-        widget=forms.Select(
-            attrs={
-                'class': 'form-control',
-                'id': 'login-group',
-            }
-        )
-    )
 
 
 class GroupForm(forms.Form):

@@ -12,16 +12,22 @@
       <change beforePath="$PROJECT_DIR$/pbltest/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbltest/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbltest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbltest/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Card/card_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/card_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Card/change_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/change_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Card/change_card1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/change_card1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Card/create_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/create_card.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Card/create_card_row.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/create_card_row.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Card/final_card1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Card/final_card1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Card/upload_index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cardlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cardlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/final_card1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/final_card1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login/register_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/register_login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/part/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/part/content_card.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/part/content_uploadcard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/content_uploadcard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/part/content_uploadcard.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/part/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/part/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uploadcard.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,22 +61,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="configurable.group.project" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\pbl\templates" />
+      <recent name="C:\Users\user\Desktop\pbl" />
+      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
+      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\pbl\static\images" />
       <recent name="C:\Users\user\Desktop\pbl\templates" />
       <recent name="C:\Users\user\Desktop\pbl\pbltest" />
       <recent name="C:\Users\123\PycharmProjects\pbl" />
       <recent name="C:\Users\123\PycharmProjects\pbl\mysitepbl\static\images\webimages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\pbl" />
-      <recent name="C:\Users\user\Desktop\pbl\templates" />
-      <recent name="C:\Users\user\Desktop\pbl\templates\Card" />
-      <recent name="C:\Users\user\Desktop\pbl\media\card\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -220,6 +226,7 @@
       <workItem from="1595788800136" duration="897000" />
       <workItem from="1595818120043" duration="2407000" />
       <workItem from="1595834547843" duration="5821000" />
+      <workItem from="1595914494106" duration="12463000" />
     </task>
     <servers />
   </component>
@@ -231,10 +238,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="274" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595299740989" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594963512657">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595921103603">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594963512657" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595921103603" />
     <state x="385" y="0" key="#pbl" timestamp="1594184963362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -243,22 +250,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594184016696" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1595820546047">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1595927031399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595820546047" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1595820546047">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595927031399" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1595927031399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595820546047" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1595820546047">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595927031399" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1595927031398">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595820546047" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1595820546047">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595927031398" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1595927031399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595820546047" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595927031399" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1595233956507">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

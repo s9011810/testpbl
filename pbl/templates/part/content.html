@@ -4,10 +4,10 @@
 				<div class="col-md-12">
 					<table class="table table-bordered" style="margin-top:50px;">
 						<tr>
-                            {% if request.session.user_name %}
+                            {% if request.session.user_identify == 'teacher' %}
                                 <td><a href="/createclass"><button class="btn" onclick="newclass()"><h4>+新教室</h4></button></a></td>
                             {% endif %}
-                            <td ><h4><a href={% url 'card' %}> 進入新教室</a></h4></td>
+{#                            <td ><h4><a href={% url 'card' %}> 進入新教室</a></h4></td>#}
                             <td ><h4><a href={% url 'check_card' %}> 卡片資料庫</a></h4></td>
 							<td ><h4>+成果櫥窗</h4></td>
 						</tr>
