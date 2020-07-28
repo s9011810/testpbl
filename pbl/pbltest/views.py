@@ -62,7 +62,7 @@ def index(request):
 
 
 def cardind(request, pk):
-    group = Group.objects.all()
+    group = Group.objects.get(group_user__user_user=pk)
     up_cards = UPCard.objects.all()
     context = {
         'group': group,
