@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock %}
+{% block  content %}
+     <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+    <table class="table table-bordered" style="margin-top:50px;">
+    <tr>
+        <td><a href={% url 'create_activate' %}>創建活動</a></td>
+    </tr>
+    <tr>
+   {% for activate_a1 in activate_a %}
+       {% if activate_a1 != null %}
+        <td><a href={% url 'view_group' pk=activate_a1.id %}><h4>{{ activate_a1.activate_name}}</h4></a></td>
+       {% endif %}
+   {% endfor %}
+    </tr>
+    </table>
+                </div>
+            </div>
+    </div>
+{% endblock %}

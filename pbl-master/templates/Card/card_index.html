@@ -1,0 +1,40 @@
+{% block Cardtitle %}
+    <title>教室管理介面</title>
+{% endblock %}
+<style>
+    table.table-bordered > thead > tr > th{
+  border:1px solid black;
+}
+    table>thead>tr.team_work{
+        height: 300px;
+    }
+</style>
+    <img class="d-block w-100" style="height: 10em" src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg">
+<table class="table table-bordered">
+    <thead >
+    <th class="text-center"scope="col"><a href={% url 'upload_card' %} ><button type="button" class="btn">創卡</button></a> </th>
+    <th class="text-center" scope="col"><button type="button" class="btn">表單轉卡片</button></th>
+    <th class="text-center" scope="col"><a type="button" class="btn"><a href="{% url 'card_manage' %}">專案卡片資料庫</a></button> </th>
+    <th class="text-center" scope="col"><button type="button" class="btn"><a herf={% url 'check_card' %}>專案成果上傳</a></button> </th>
+     <th class="text-center" scope="col"><button type="button" class="btn"><a herf={% url 'check_group' %}>群組管理</a></button> </th>
+    </thead>
+</table>
+{% block cardcontext %}
+
+    <table class="table table-bordered table-dark">
+        <tbody class="text-center">
+            <tr class="team_work">
+                <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >{{ group }}</a></th>
+                     {% for up_card in up_cards %}
+                         {% if up_card.group_id == group.id %}
+                         {% if up_card.class_material == '1' %}
+                            <th scope="col"><a href="{% url 'createcard' pk=up_card.id %}"> <h3>卡片名稱:{{ up_card.title }}</h3><img src="{{ up_card.cover.url }}" style="width: 300px;height: 300px"></a></th>
+                         {% elif up_card.class_material == '2' %}
+                             <th scope="col"><a href="{% url 'createcardrow' pk=up_card.id %}"> <h3>卡片名稱:{{ up_card.title }}</h3><img src="{{ up_card.cover.url }}" style="width: 300px;height: 300px"></a></th>
+                         {% endif %}
+                         {% endif %}
+                     {% endfor %}
+                        </tr>
+        </tbody>
+    </table>
+{% endblock %}

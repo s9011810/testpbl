@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath pbl pbl.wsgi

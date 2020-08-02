@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock %}
+{% block  content %}
+     <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+    <table class="table table-bordered" style="margin-top:50px;">
+    <tr>
+        {% for activate_a1 in  activate_a%}
+            <td><a href={% url 'create_group' pk=activate_a1.id %}>創建群組</a></td>
+        {% endfor %}
+    </tr>
+    <tr>
+   {% for group_a1 in group_a %}
+       <td><a href={% url 'card' pk=group_a1.id %}><h4>{{ group_a1.group}}</h4></a></td>
+   {% endfor %}
+    </tr>
+    </table>
+                </div>
+            </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>劇本雲-查看群組</title>
+{% endblock %}
+{% block content %}
+<table class="table mb-0">
+        <thead>
+            <tr>
+                <th>群組</th>
+                <th>新增組員</th>
+                <th>刪除</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for groupa in group %}
+                <td>{{ groupa.group }}</td>
+                <td>
+                        <form method="post" action="{% url 'edit_group' groupa.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">修改</button>
+                    </form>
+                </td>
+
+                <td>
+                        <form method="post" action="{% url 'delete_group' groupa.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">刪除</button>
+                    </form>
+                </td>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</body>
+{% endblock %}

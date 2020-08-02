@@ -1,0 +1,34 @@
+{% block Cardtitle %}
+    <title>卡片管理介面</title>
+{% endblock %}
+<script  src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <img class="d-block w-100" style="height: 10em" src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg">
+<table class="table table-bordered">
+    <thead >
+    <th class="text-center"scope="col"><a href={% url 'upload_card' %} ><button type="button" class="btn">工作坊表單上傳</button></a> </th>
+    <th class="text-center" scope="col"><button type="button" class="btn">表單轉卡片</button></th>
+      <th class="text-center" scope="col"><button type="button" class="btn">專案卡片資料庫</button> </th>
+    <th class="text-center" scope="col"><button type="button" class="btn"><a herf={% url 'check_card' %}>專案成果上傳</a></button> </th>
+    <th class="text-center" scope="col"><button type="button" class="btn"><a herf={% url 'check_group' %}>群組管理</a></button> </th>
+    </thead>
+</table>
+{% block cardcontext %}
+    <div class="container">
+    <div class="row">
+    <div class="card w-75 bg-dark text-white">
+      <h5 class="card-title text-center"><a href={% url 'check_card' %} >大雄 </a></h5>
+    </div>
+      {% for up_card in up_cards %}
+          <div class="card w-75 bg-dark text-white"style="margin-top: 1em;">
+            {% if up_card.base_card_id != null %}
+                        <a href={% url 'change_card' pk=up_card.base_card_id %} class="text-center"> <img id="source" src="{{ up_card.base_img }}" width="300px" height="300px"></a>
+            {% elif up_card.base_card1_id != null%}
+                <a href={% url 'change_card1' pk=up_card.base_card1_id %} class="text-center"> <img id="source" src="{{ up_card.base_img }}" width="300px" height="300px"></a>
+            {% endif %}
+
+          </div>
+      {% endfor %}
+
+    </div>
+    </div>
+{% endblock %}

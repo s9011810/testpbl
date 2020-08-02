@@ -1,0 +1,24 @@
+{% block create_group %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    <form method="POST" class="post-form">
+                        {% csrf_token %}
+                         <label for="group_name"> 群組名稱:</label>
+                        {{ groupform.group }}
+                        <div class="form-group">
+                            <label for="user_id"> 選擇學員:</label>
+                                {{ groupform.group_user }}
+                        </div>
+                    <div class="form-group">
+                            <label for="user_id"> 活動:</label>
+                        {{ groupform.activate }}
+                        </div>
+                    <button type="submit" class="btn btn-success">修改</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+{% endblock %}
