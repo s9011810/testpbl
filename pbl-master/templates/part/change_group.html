@@ -2,6 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
+                {% for group_member1 in group_member %}
+                    {{ group_member1.id }}
+                {% endfor %}
                 </div>
                 <div class="col-md-6">
                     <form method="POST" class="post-form">
@@ -10,7 +13,20 @@
                         {{ groupform.group }}
                         <div class="form-group">
                             <label for="user_id"> 選擇學員:</label>
-                                {{ groupform.group_user }}
+                        {% for user_a1 in user_a %}
+                            {% for user_b1 in user_b %}
+                                {% if user_a1.id == user_b1 %}
+                                    <input type="checkbox" value="{{ user_a1.id }}" name="check_box_list" checked>{{ user_a1.name }}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                        {% for user_a1 in user_a %}
+                            {% for user_e1 in user_e %}
+                                {% if user_a1.id == user_e1 %}
+                                    <input type="checkbox" value="{{ user_a1.id }}" name="check_box_list">{{ user_a1.name }}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
                         </div>
                     <div class="form-group">
                             <label for="user_id"> 活動:</label>

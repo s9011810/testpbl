@@ -195,11 +195,37 @@ def delete_group(request, pk):
 def edit_group(request, pk):
     group = Group.objects.get(id=pk)
     groupform = form.CreateGroup(request.POST or None, instance=group)
+    group_member = group.group_user.all()
+    user_a = models.User.objects.all()
+    user_c = []
+    member_c = []
+    user_b = []
+    user_e = []
+    for user_a1 in user_a:
+        user_c.append(user_a1.id)
+        user_e.append(user_a1.id)
+    for group_member1 in group_member:
+        member_c.append(group_member1.id)
+    for i in user_c:
+        for j in member_c:
+            if i == j:
+                user_b.append(i)
+                user_e.remove(i)
     context = {
         'groupform': groupform,
         'group': group,
+        'user_a': user_a,
+        'user_b': user_b,
+        'user_e': user_e
     }
+    tests = request.POST.getlist('check_box_list')
     if groupform.is_valid():
-        groupform.save()
-        return redirect('index')
+        obj: Group()
+        obj = groupform.save()
+        for t in tests:
+            obj.group_user.add(t)
+            obj.save()
+            return redirect('index')
+    else:
+        groupform = form.CreateGroup()
     return render(request, 'edit_group.html', context)
