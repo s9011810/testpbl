@@ -32,7 +32,7 @@ class Group(models.Model):
     activate = models.ForeignKey('CreateActivate', on_delete=models.CASCADE, blank=True)
 
     def __str__(self):
-        return self.group
+        return self.group, self.activate
 
 
 class CreateActivate(models.Model):

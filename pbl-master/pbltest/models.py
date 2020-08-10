@@ -20,7 +20,7 @@ class UPCard(models.Model):
     class_material = models.CharField(max_length=100, null=True)
     group = models.ForeignKey('login.Group', on_delete=models.CASCADE, null=True, blank=True)
     activate = models.ForeignKey('login.CreateActivate', on_delete=models.CASCADE, null=True, blank=True)
-    thumbnail = models.CharField(max_length=100, null=True) #縮圖
+    thumbnail = models.CharField(max_length=100, null=True)
 
     def __str__(self):
         return self.title

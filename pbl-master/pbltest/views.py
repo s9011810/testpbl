@@ -1,5 +1,4 @@
 import os
-
 import cv2
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse
@@ -68,7 +67,7 @@ def index(request):
 
 
 def cardind(request, pk):
-    group = Group.objects.filter(group_user__user_user=pk).all().first()
+    group = Group.objects.all()
     up_cards = UPCard.objects.all()
     context = {
         'group': group,
@@ -112,16 +111,13 @@ def change_card1(request, pk):
     return render(request, 'change_card1.html', context)
 
 
-
-
-
-#20200728
-#原urls.py 中 #path('upload_card/', UploadView.as_view(), name='upload_card'),
-#改為    path('upload_card/', views.uploadcard(), name='upload_card'),
+# 20200728
+# 原urls.py 中 #path('upload_card/', UploadView.as_view(), name='upload_card'),
+# 改為    path('upload_card/', views.uploadcard(), name='upload_card'),
 def uploadcard(request):
-    cards :UPCard
+    cards: UPCard
     if request.method == 'POST':
-        form = CardForm(request.POST,request.FILES)
+        form = CardForm(request.POST, request.FILES)
         if form.is_valid():
             cards = form.save() #UPCard 的實體
             file = cards.cover.file.name
@@ -143,7 +139,7 @@ def uploadcard(request):
             return redirect(reverse('check_card'))
     else:
         form = CardForm()
-    return render(request,'cardlist.html',{'form':form})
+    return render(request, 'cardlist.html', {'form': form})
 
 
 def card_list(request):

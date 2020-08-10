@@ -131,10 +131,12 @@ def create_activate(request):
 
 
 def view_activate(request, pk):
+    group_a = models.Group.objects.filter(group_user=request.session['user_id'])
     activte_a = models.CreateActivate.objects.filter(class_id=pk)
     context = {
         'activate_a': activte_a,
-        'pk': pk
+        'pk': pk,
+        'group_a': group_a
     }
     return render(request, 'view_activate.html', context)
 

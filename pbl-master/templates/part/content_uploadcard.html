@@ -13,12 +13,7 @@
                                 <option value="1">直式</option>
                                 <option value="1">橫式</option>
         </select>
-        <h1>123</h1>
-        <select id="activate_id" name="activate_id">
-            {% for activate_a in activate_a %}
-                <option value={{ activate_a.id }}>{{ activate_a.activate_name }}</option>
-            {% endfor %}
-        </select>
+        {{ card.activate }}
 
 
         <!--</div>-->
