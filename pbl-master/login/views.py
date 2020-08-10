@@ -225,7 +225,7 @@ def edit_group(request, pk):
         for t in tests:
             obj.group_user.add(t)
             obj.save()
-            return redirect('index')
+        return redirect('index')
     else:
         groupform = form.CreateGroup()
     return render(request, 'edit_group.html', context)
