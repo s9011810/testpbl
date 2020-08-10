@@ -1,6 +1,6 @@
 from django import forms
-from login.models import CreateActivate, CreateClass, Group
-from .models import UPCard, Card, User, RowCard
+from login.models import CreateActivate, CreateClass, Group, User
+from .models import UPCard, Card, RowCard
 from django.utils import timezone
 
 
@@ -16,7 +16,7 @@ class CardForm(forms.ModelForm):
         queryset=User.objects.filter(),
         widget=forms.Select(
             attrs={
-                'class': 'form-controll form-control',
+                'class': 'form-control',
                 'id': 'card-author',
 
             }
@@ -114,11 +114,30 @@ class CreateCardForm(forms.ModelForm):
             }
         )
     )
+    activate = forms.ModelChoiceField(
+        queryset=CreateActivate.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-controll form-control',
+                'id': 'activate',
+
+            }
+        )
+    )
+    group = forms.ModelChoiceField(
+        queryset=Group.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'group',
+
+            }
+        )
+    )
 
     class Meta:
         model = Card
-
-        fields = '__all__'
+        fields = ('title', 'context', 'author', 'context1', 'cover', 'activate', 'group')
 
 
 class RowCreateCardForm(forms.ModelForm):
@@ -165,6 +184,26 @@ class RowCreateCardForm(forms.ModelForm):
             }
         )
     )
+    activate = forms.ModelChoiceField(
+        queryset=CreateActivate.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-controll form-control',
+                'id': 'activate',
+
+            }
+        )
+    )
+    group = forms.ModelChoiceField(
+        queryset=Group.objects.all(),
+        widget=forms.Select(
+            attrs={
+                'class': 'form-control',
+                'id': 'group',
+
+            }
+        )
+    )
 
     # activte = forms.ModelChoiceField(
     #
@@ -189,7 +228,7 @@ class RowCreateCardForm(forms.ModelForm):
 
     class Meta:
         model = RowCard
-        fields = ('title', 'context', 'context1', 'context2', 'cover')
+        fields = ('title', 'context', 'context1', 'context2', 'cover', 'activate','group')
 
 
 class TestForm(forms.Form):

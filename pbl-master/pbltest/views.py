@@ -23,9 +23,9 @@ def post_card(request, pk):
             url = reverse('preview_card', args=[final_card.pk])
             return redirect(url)
     else:
-        form = CreateCardForm()
+        card_form = CreateCardForm()
     context = {
-        'form': form,
+        'form': card_form,
         'pk': pk,
         'card': card,
     }
@@ -42,11 +42,11 @@ def post_card1(request, pk):
             final_card = card_form.save()
             url = reverse('preview_card1', args=[final_card.pk])
             return redirect(url)
-        return  HttpResponse(card_form.errors)
+        return HttpResponse(card_form.errors)
     else:
-        form = RowCreateCardForm()
+        card_form = RowCreateCardForm()
     context = {
-        'form': form,
+        'form': card_form,
         'pk': pk,
         'card': card,
     }
@@ -67,10 +67,12 @@ def index(request):
 
 
 def cardind(request, pk):
-    group = Group.objects.all()
+    group = Group.objects.get(id=pk)
+    group_user = group.group_user.all()
     up_cards = UPCard.objects.all()
     context = {
         'group': group,
+        'group_user': group_user,
         'up_cards': up_cards,
         'pk': pk
     }

@@ -143,7 +143,7 @@ def view_activate(request, pk):
 
 def view_group(request, pk):
     activate_a = models.CreateActivate.objects.filter(id=pk)
-    group_a = models.Group.objects.all()
+    group_a = models.Group.objects.filter(activate=pk)
     context = {
         'activate_a': activate_a,
         'group_a': group_a,

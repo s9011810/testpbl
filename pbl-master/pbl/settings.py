@@ -38,8 +38,6 @@ INSTALLED_APPS = [
     'pbltest',
     'login',
     'django.contrib.staticfiles',
-    'captcha',
-    ''
 ]
 
 MIDDLEWARE = [

@@ -24,9 +24,11 @@
     <table class="table table-bordered table-dark">
         <tbody class="text-center">
             <tr class="team_work">
-            {% for group_a in group %}
-                <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >{{ group_a.group }}</a></th>
-            {% endfor %}
+                {% for group_user_a in group_user %}
+                    {% if group_user_a.id == request.session.user_id %}
+                    <th scope="col" style="padding-bottom: 10%"><a href={% url 'check_card' %} >{{ group.group }}</a></th>
+                    {% endif %}
+                {% endfor %}
                      {% for up_card in up_cards %}
                          {% if up_card.group_id == group.id %}
                          {% if up_card.class_material == '1' %}
