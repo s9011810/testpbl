@@ -42,7 +42,6 @@ def post_card1(request, pk):
             final_card = card_form.save()
             url = reverse('preview_card1', args=[final_card.pk])
             return redirect(url)
-        return HttpResponse(card_form.errors)
     else:
         card_form = RowCreateCardForm()
     context = {
