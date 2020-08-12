@@ -10,12 +10,10 @@
         <td><a href={% url 'create_activate' %}>創建活動</a></td>
     </tr>
     <tr>
-    {% for group_a1 in group_a %}
-   {% for activate_a1 in activate_a %}
-       {% if activate_a1 != null and group_a1.activate == activate_a1%}
-        <td><a href={% url 'view_group' pk=activate_a1.id %}><h4>{{ activate_a1.activate_name}}</h4></a></td>
+        {% for activate_a1 in activate_a %}
+       {% if group_a.activate == activate_a1 or request.session.user_identify == 'teacher' %}
+            <td><a href={% url 'view_group' pk=activate_a1.id %}><h4>{{ activate_a1.activate_name}}</h4></a></td>
        {% endif %}
-   {% endfor %}
      {% endfor %}
     </tr>
     </table>
