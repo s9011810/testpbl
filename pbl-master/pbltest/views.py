@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect, reverse
 from django.template.loader import get_template
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView
-from login.models import CreateClass, CreateActivate, Group
+from login.models import CreateClass, CreateActivate, Group, User
 from .forms import CardForm, CreateCardForm, RowCreateCardForm
 from .imglib import Picture_part
 from .models import UPCard, Card, TestCard, RowCard
@@ -16,6 +16,8 @@ from easy_pdf.views import PDFTemplateView
 def post_card(request, pk):
     post = UPCard.objects.all()
     card = UPCard.objects.get(id=pk)
+    author = User.objects.all()
+    group = Group.objects.all();
     if request.method == "POST":
         card_form = CreateCardForm(request.POST)
         if card_form.is_valid():
@@ -28,6 +30,8 @@ def post_card(request, pk):
         'form': card_form,
         'pk': pk,
         'card': card,
+        'author': author,
+        'group': group,
     }
     return render(request, "create_card.html", context)
 

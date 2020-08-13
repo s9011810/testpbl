@@ -27,7 +27,11 @@
                     </td>
                     <td>{{ card.title }}</td>
                     <td>{{ card.author }}</td>
-                    <td>{{ card.class_material }}</td>
+                    {% if card.class_material == '1' %}
+                        <td>直式</td>
+                    {% elif card.class_material == '2' %}
+                        <td>橫式</td>
+                    {% endif %}
                     <td><a href="{{ card.cover.url }}" class="btn btn-primary" target="_blank">下載圖片</a> </td>
                     <td>
                         <form method="post" action="{% url 'class_delete_card' card.pk %}">

@@ -1,7 +1,16 @@
+<script>
+    function redirectPage() {
+        var wjb51=screen.width;
+        var hjb51=screen.height;
+        return (wjb51+"*"+hjb51);
+    }
+    document.getElementById("demo").innerHTML = redirectPage();
+</script>
 {% block content %}
     <div class="container">
 			<div class="row">
 				<div class="col-md-12">
+                <p id="demo"></p>
 					<table class="table table-bordered" style="margin-top:50px;">
 						<tr>
                             {% if request.session.user_identify == 'teacher' %}
@@ -13,6 +22,7 @@
 							<td ><h4>+成果櫥窗</h4></td>
 						</tr>
 					</table>
+
                                 </div>
 			</div>
 		</div>

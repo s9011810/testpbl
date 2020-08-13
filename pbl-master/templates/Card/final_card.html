@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-md-9 ">
                     <img src="{% static "images/卡片元素-02.png" %}" width="100px;" style="float:right;"><br>
-                    <p style="float:right;'">{{ unit.author_id}}</p>
+                    <p style="float:right;'">作者:{{ unit.author}}</p>
+                    <p style="float:right;'">{{ unit.group}};</p>
                 </div>
             </div>
             <div class="row">
@@ -33,7 +34,7 @@
             {{ unit.context1 }}
         </div>
         <div class="col-md-12">
-            <img src="{% static "images/卡片元素-07.png" %}" style="float:right;height: 40px;width: 180px"">
+            <img src="{% static "images/卡片元素-07.png" %}" style="float:right;height: 40px;width: 180px">
         </div>
         </div>
     </div>
@@ -49,9 +50,11 @@
 <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
     function screenshot1(){
+        var wjb51=screen.width;
+        var hjb51=screen.height;
         html2canvas(document.getElementById('chart3'),{
-            x:450,
-            y:50,
+            x:wjb51/2,
+            y:hjb51,
             width:500,
             height:500
         }).then(canvas=> {

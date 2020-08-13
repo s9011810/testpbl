@@ -1,7 +1,7 @@
 {% block nav %}
     <nav class="navbar navbar-expand-md bg-dark navbar-dark ">  <!-- 導覽列開始 -->
 
-        <a class="navbar-brand" href="#"><h2>劇本雲</h2></a>  <!-- Logo 放置處 -->
+        <div class="navbar-brand"><h2>劇本雲</h2></div>  <!-- Logo 放置處 -->
 
         <!-- 就是當畫面縮小時，摺疊起來的按鈕圖示 -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mylink">
@@ -18,19 +18,10 @@
 {#                  <a class="nav-link" href={% url "card"%}>回教室首頁</a>#}
 {#                </li>#}
                 <li class="nav-item">
-                  <a class="nav-link" href="#">切換教室</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">表單紀錄</a>
+                  <a class="nav-link" href="{% url 'index' %}">切換教室</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href={% url 'check_card' %}>成果發表</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">活動紀錄</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">個人資訊設定</a>
                 </li>
                   {% if request.session.user_name %}
                   <li class="nav-item ">
