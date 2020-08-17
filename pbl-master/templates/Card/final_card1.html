@@ -2,12 +2,16 @@
 
         <div class="col-md-6" id="chart3">
             <div class="row">
-                <div class="col-md-9 ">
+                <div class="col-md-4">
 
-                    <h1 style="float:left;">{{ unit.title }}</h1>
+                </div>
+                <div class="coi-md-4">
+                    <h1>{{ unit.title }}</h1>
+                </div>
+                <div class="col-md-4 ">
                     <img src="{% static "images/卡片元素-02.png" %}" width="100px;" style="float:right;"><br>
                     <p style="float:right;'">作者:{{ unit.author}}</p>
-                    <p style="float:right;'">{{ unit.group}};</p>
+                    <p id = "group" style="float:right;'">{{ unit.group}};</p>
                 </div>
             </div>
             <div class="row">
@@ -21,14 +25,17 @@
             <div class="row">
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            {{ unit.context1 }}
+        </div>
+        <div class="col-md-4">
             <img src="{% static "images/卡片元素-07.png" %}" style="float:right;height: 40px;width: 180px">
 
         </div>
         </div>
-    </div>
-         <div class="col-md-6">
-            {{ unit.context1 }}
         </div>
 
 
@@ -43,10 +50,10 @@
         var wjb51=screen.width;
         var hjb51=screen.height;
         html2canvas(document.getElementById('chart3'),{
-            x:wjb51/2,
-            y:hjb51,
-            width:500,
-            height:500
+            x:250,
+            y:0,
+            width:wjb51/2,
+            height:hjb51,
         }
         ).then(canvas=> {
               var result1 = canvas.toDataURL('image/jpeg');

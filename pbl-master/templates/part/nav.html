@@ -17,17 +17,20 @@
 {#                <li class="nav-item">#}
 {#                  <a class="nav-link" href={% url "card"%}>回教室首頁</a>#}
 {#                </li>#}
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'index' %}">切換教室</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href={% url 'check_card' %}>成果發表</a>
-                </li>
                   {% if request.session.user_name %}
                   <li class="nav-item ">
                     <a class="nav-link" href="/createclass">建立教室</a>
                 </li>
                   {% endif %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'index' %}">切換教室</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href={% url 'check_card' %}>卡片資料庫</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href={% url 'card_manage' %}>成果發表</a>
+                </li>
               </ul>
              <ul class="navbar-nav">
                 <li class="nav-item ">

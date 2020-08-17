@@ -84,9 +84,11 @@ def cardind(request, pk):
 #Todo cardmanage 轉群組需額外處理
 
 def card_manage(request):
-    up_cards = TestCard.objects.all()
+    up_cards = TestCard.objects.all().order_by('-groups')
+    groups = Group.objects.all()
     return render(request, 'card_manage.html', {
-        'up_cards': up_cards
+        'up_cards': up_cards,
+        'groups': groups,
     })
 
 
@@ -162,6 +164,8 @@ def card_list(request):
 
 
 def check_card(request):
+    print('hello')
+    print(request.user.username)
     up_cards = Card.objects.all()
     carda = UPCard.objects.all()
     context = {
@@ -177,6 +181,7 @@ class CardListView(ListView):
 
     context_object_name = 'up_cards'
 
+    
 
 class UploadView(CreateView):
     model = UPCard
@@ -206,6 +211,7 @@ def preview_card(request, pk):
     if request.method == "POST":
         test.base_img = request.POST.get('result1')
         test.base_card_id = unit.pk
+        test.groups_id = unit.group.id
         test.save()
     return render(request,  'final_card.html', context)
 
@@ -219,5 +225,6 @@ def preview_card1(request, pk):
     if request.method == "POST":
         test.base_img = request.POST.get('result1')
         test.base_card1_id = unit.pk
+        test.groups_id = unit.group.id
         test.save()
     return render(request,  'final_card1.html', context)

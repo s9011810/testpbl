@@ -15,20 +15,26 @@
 {% block cardcontext %}
     <div class="container">
     <div class="row">
-    <div class="card w-75 bg-dark text-white">
-      <h5 class="card-title text-center"><a href={% url 'check_card' %} >大雄 </a></h5>
-    </div>
-      {% for up_card in up_cards %}
-          <div class="card w-75 bg-dark text-white"style="margin-top: 1em;">
-            {% if up_card.base_card_id != null %}
-                        <a href={% url 'change_card' pk=up_card.base_card_id %} class="text-center"> <img id="source" src="{{ up_card.base_img }}" width="300px" height="300px"></a>
-            {% elif up_card.base_card1_id != null%}
-                <a href={% url 'change_card1' pk=up_card.base_card1_id %} class="text-center"> <img id="source" src="{{ up_card.base_img }}" width="300px" height="300px"></a>
-            {% endif %}
+        <script>
+        {% for groups in groups %}
+　           document.write('<div class="card w-75 bg-dark text-white col-md-6">');
+                document.write('<h5 class="card-title text-center"><a href={% url 'check_card' %} > {{ groups }}</a></h5>');
 
-          </div>
-      {% endfor %}
+            {% for up_card in up_cards %}
+                {% if up_card.groups.id == groups.id %}
+                        document.write('<div class="card w-75 bg-dark text-white"style="margin-top: 1em;">');
+                    {% if up_card.base_card_id != null %}
+                        document.write('<a href={% url 'change_card' pk=up_card.base_card_id %} class="text-center"> <img id="source" src="{{ up_card.base_img }}" width="300px" height="300px"></a>');
+                    {% elif up_card.base_card1_id != null%}
+                        document.write('<a href={% url 'change_card1' pk=up_card.base_card1_id %} class="text-center"> <img id="source" src="{{ up_card.base_img }}" width="300px" height="300px"></a>');
+                    {% endif %}
+                        document.write('</div>');
+                {% endif %}
+            {% endfor %}
 
+                        document.write('</div>');
+        {% endfor %}
+</script>
     </div>
     </div>
 {% endblock %}
