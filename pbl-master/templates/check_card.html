@@ -16,7 +16,9 @@
             </tr>
         </thead>
         <tbody>
+        {% for group in group %}
             {% for card in up_cards %}
+                {% if group.id == card.group_id %}
                 <tr>
                     <td>
                         {% if card.cover and card.class_material == '1' %}
@@ -42,7 +44,9 @@
                     </td>
 
                 </tr>
+                {% endif %}
             {% endfor %}
+        {% endfor %}
         </tbody>
     </table>
     </div>

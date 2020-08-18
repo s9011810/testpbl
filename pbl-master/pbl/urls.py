@@ -18,7 +18,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path, include
 from login import views
-from pbltest.views import cardind,  card_list, CardListView, CreateView, delete_card, UploadView, post_card, \
+from pbltest.views import cardind,  card_list, card_list_view, CreateView, delete_card, UploadView, post_card, \
     change_card, card_manage, screen_shot, check_card, preview_card, post_card1, preview_card1, change_card1, uploadcard
 from easy_pdf.views import PDFTemplateView
 from django.contrib.auth.views import LoginView
@@ -33,7 +33,7 @@ urlpatterns = [
     path('card/<int:pk>', cardind, name='card'),
     path('upload_card/', uploadcard, name='upload_card'),
     path('class/card_list/<int:pk>', delete_card, name='class_delete_card'),
-    path('checkcard/', CardListView.as_view(), name='check_card'),
+    path('checkcard/', card_list_view, name='check_card'),
     path('createcard/<int:pk>', post_card, name='createcard'),
     path('changecard/<int:pk>', change_card, name='change_card'),
     path('card_manage', card_manage, name='card_manage'),

@@ -175,13 +175,17 @@ def check_card(request):
     return render(request, 'check_card.html', context)
 
 
-class CardListView(ListView):
-    model = UPCard
-    template_name = "class_check_card.html"
+def card_list_view(request):
+    up_cards = UPCard.objects.all()
 
-    context_object_name = 'up_cards'
+    user_id = request.session['user_id']
+    group = Group.objects.all()
+    context = {
+        'up_cards': up_cards,
+        'group': group
+    }
+    return render(request, "class_check_card.html", context)
 
-    
 
 class UploadView(CreateView):
     model = UPCard
