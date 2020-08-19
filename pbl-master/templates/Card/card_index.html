@@ -13,10 +13,9 @@
 <table class="table table-bordered">
     <thead >
     <th class="text-center"scope="col"><a href={% url 'upload_card' %} ><button type="button" class="btn">創卡</button></a> </th>
-    <th class="text-center" scope="col"><button type="button" class="btn">表單轉卡片</button></th>
-    <th class="text-center" scope="col"><a type="button" class="btn"><a href="{% url 'card_manage' %}">專案卡片資料庫</a></button> </th>
-    <th class="text-center" scope="col"><button type="button" class="btn"><a herf={% url 'check_card' %}>專案成果上傳</a></button> </th>
-     <th class="text-center" scope="col"><button type="button" class="btn"><a herf={% url 'check_group' %}>群組管理</a></button> </th>
+    <th class="text-center" scope="col"><a href="{% url 'card_manage' %}" class="btn">專案卡片資料庫</a></th>
+    <th class="text-center" scope="col"><a href="{% url 'check_card' %}" class="btn">專案成果上傳</a> </th>
+    <th class="text-center" scope="col"><a href="{% url 'check_group' %}" class="btn">群組管理</a> </th>
     </thead>
 </table>
 {% block cardcontext %}

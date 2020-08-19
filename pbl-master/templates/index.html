@@ -20,4 +20,17 @@
             </div>
     </div>
         {% endif %}
+     {%  if request.session.user_name == null %}
+        <div class="row" style="margin-top: 20%">
+             <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+         <a href="/register/" class="text-success float-left"><ins>註冊帳號</ins></a>
+         <a class="float-right" href="/login"  >登入</a>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        </div>
+    {% endif %}
 {% endblock %}

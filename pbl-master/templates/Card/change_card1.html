@@ -27,9 +27,18 @@
                             <label for="card-cover"> 關聯卡片:</label>
                             {{ card_form.cover }}
                         </div>
+
                         <div class="form-group">
                             <label for="card-author"> 作者:</label>
                             {{ card_form.author }}
+                        </div>
+                        <div class="form-group">
+                            <label for="card-group"> 群組:</label>
+                            {{ card_form.group }}
+                        </div>
+                        <div class="form-group">
+                            <label for="card-activate"> 活動:</label>
+                            {{ card_form.activate }}
                         </div>
                         <div class="form-group">
                             <label for="card-context"> 創建時間:</label>
@@ -39,12 +48,10 @@
                             <label for="card-context"> 修改時間:</label>
                             {{ card_form.published_date }}
                         </div>
-
                         <button type="reset" class="btn btn-danger" style="margin-right: 50%">取消</button>
-                        <button type="submit" class="btn btn-success">預覽</button>
+                     <button type="submit" class="btn btn-success">預覽</button>
                     </div>
                 </div>
             </div>
-
         </form>
 {% endblock %}

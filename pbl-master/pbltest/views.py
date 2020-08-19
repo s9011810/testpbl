@@ -99,6 +99,8 @@ def change_card(request, pk):
         'card_form': card_form,
         'unit': unit,
     }
+
+    print('123');
     if card_form.is_valid():
         card_form.save()
         return redirect('index')

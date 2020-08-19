@@ -188,7 +188,7 @@ class RowCreateCardForm(forms.ModelForm):
         queryset=CreateActivate.objects.all(),
         widget=forms.Select(
             attrs={
-                'class': 'form-controll form-control',
+                'class': 'form-control',
                 'id': 'activate',
 
             }
