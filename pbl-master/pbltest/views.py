@@ -1,4 +1,6 @@
 import os
+import time
+
 import cv2
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse
@@ -210,6 +212,8 @@ def screen_shot(request):
 
 def preview_card(request, pk):
     unit = Card.objects.get(id=pk)
+    global bools
+    bools = False
     context = {
         'unit': unit
     }
@@ -219,6 +223,9 @@ def preview_card(request, pk):
         test.base_card_id = unit.pk
         test.groups_id = unit.group.id
         test.save()
+        bools = True
+        if bools:
+            return redirect('card_manage')
     return render(request,  'final_card.html', context)
 
 

@@ -1,17 +1,20 @@
+
 {% load staticfiles %}
 <div class="row">
         <div class="col-md-6" id="chart3">
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-9" style="margin-left: 70%">
-                    <img src="{% static "images/卡片元素-02.png" %}" width="240px;" height="70px" style="float:right;"><br>
+                <div class="col-md-6"></div>
+                 <div class="col-md-2"></div>
+                <div class="col-md-4" style="margin-left: 95%;">
+                    <div id="card-idea"></div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-9" style="margin-left: 70%">
-                 <p style="float:right;'">作者:{{ unit.author}}</p>
-                    <p style="float:right;'" id="group">{{ unit.group}};</p>
+                <div class="col-md-6"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-4" style="margin-left: 95%;">
+                 <p style="font-size:30px;">作者:{{ unit.author}};</p>
+                    <p style="font-size:30px;">{{ unit.group}};</p>
                 </div>
             </div>
             <div class="row">
@@ -20,28 +23,28 @@
                     <h1 style="text-orientation: upright;writing-mode: vertical-lr;">{{ unit.title }}</h1><br>
                  </div>
                 <div class="col-md-4">
-                    <img src="/{{ unit.cover.thumbnail }}" style="width: 710px;height: 670px;"/>
+                    <div id="card-img"></div>
                 </div>
             </div>
             <div class="row">
         <div class="col-md-8">
-            <img src="{% static "images/卡片元素-05.png" %} " style="float:right;height: 50px;width: 140px;margin-bottom: 10px">
+            <div id="card-context1"></div>
         </div>
 
         <div class="col-md-4">
-            {{ unit.context }}
+            <div id="card-text"></div>
         </div>
     </div>
             <div class="row">
                 <div class="col-md-8">
-                    <img src="{% static "images/卡片元素-04.png" %}" style="float:right;height: 50px;width: 140px"><br>
+                    <div id="card-context"> </div><br>
                 </div>
                  <div class="col-md-4">
-                    {{ unit.context1 }}
+                    <div id="card-text1"> </div>
                 </div>
                 <div class="col-md-8"></div>
                 <div class="col-md-4">
-                    <img src="{% static "images/卡片元素-07.png" %}" style="float:left;height: 60px;width: 315px">
+                    <div id="card-img"></div>
                 </div>
             </div>
             <div class="row">
@@ -61,14 +64,32 @@
 <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
+    window.onload=function(){
+        var wjb51=screen.width;
+        var hjb51=screen.height;
+        var imgw=hjb51/2;
+        var imgh=hjb51/2;
+        var conm=hjb51/10;
+        var conw=hjb51/9;
+        var conh=hjb51/27;
+        var ideaw=hjb51/5;
+        var ideah=hjb51/20;
+        var btnm=hjb51/4;
+        document.getElementById("card-img").innerHTML='<img src="/{{ unit.cover.thumbnail }}" style="float:right;width:'+imgw+'px;height:'+imgh+'px;float:left;"/>';
+        document.getElementById("card-context").innerHTML='<img src="{% static "images/卡片元素-04.png" %}" style="float:right;height:'+conh+'px;width:'+conw+'px;margin-top:'+conm+'px">';
+        document.getElementById("card-context1").innerHTML='<img src="{% static "images/卡片元素-05.png" %} " style="float:right;height:'+conh+'px;width:'+conw+'px;margin-bottom: 10px">';
+        document.getElementById('card-text').innerHTML='<h4 style="margin-top:'+conh/2+'px">{{ unit.context }}</h4>';
+        document.getElementById('card-text1').innerHTML='<h4 style="margin-top:'+conm+'px">{{ unit.context1 }}</h4>';
+        document.getElementById('card-idea').innerHTML='<img src="{% static "images/卡片元素-02.png" %}" width="'+ideaw+'px;" height="'+ideah+'px;"">';
+    }
     function screenshot1(){
         var wjb51=screen.width;
         var hjb51=screen.height;
         html2canvas(document.getElementById('chart3'),{
-            x:wjb51/2,
-            y:hjb51,
-            width:500,
-            height:500
+            x:100,
+            y:100,
+            width:wjb51,
+            height:hjb51,
         }).then(canvas=> {
               var result1 = canvas.toDataURL('image/jpeg');
              $.ajax({
@@ -77,6 +98,8 @@
                 data: { 'result1': result1},
             });
         });
+
+
     }
 
 </script>
