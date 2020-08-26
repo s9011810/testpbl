@@ -9,8 +9,10 @@
                 <div class="col-md-6">
                     <form method="POST" class="post-form">
                         {% csrf_token %}
-                        <label for="activate_name"> 創建活動名稱:</label>
+                        {% if  request.session.user_identify == 'teacher' %}
+                        <label for="activate_name"> 創建班級名稱:</label>
                         {{ activate.activate_name }}
+                    {% endif %}
                         <label for="activte-class_id"> 選擇教室:</label>
                             <select id="class_id" name="class_id" class="form-control">
                                 {% for class_c in class_c %}

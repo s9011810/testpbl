@@ -15,7 +15,6 @@ class FileCard(models.Model):
 class UPCard(models.Model):
     title = models.CharField(max_length=100)
     author = models.ForeignKey('login.User', on_delete=models.CASCADE, null=True, blank=True)
-    pdf = models.FileField(upload_to="media/card/img/", null=True, blank=True)
     cover = models.ImageField(upload_to="card/covers/", null=True, blank=True)
     class_material = models.CharField(max_length=100, null=True)
     group = models.ForeignKey('login.Group', on_delete=models.CASCADE, null=True, blank=True)

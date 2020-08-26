@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block title %}
-    <title>劇本雲-首頁</title>
+    <title>羣創實驗課</title>
 {% endblock %}
 {% block content %}
     {% if  request.session.user_name != null %}
-    <h1>{{ request.session.user_name }}! 哈囉！</h1>
     {% include "part/content.html" %}
     <div class="container">
 			<div class="row">
@@ -34,4 +33,15 @@
         </div>
         </div>
     {% endif %}
+    <div class="row">
+        <div class="col-md-4">
+                <img class="img-fluid" src="{% static "images/123.png"  %}">
+            </div>
+        <div class="col-md-4">
+                <img class="img-fluid" src="{% static "images/123.png"  %}">
+            </div>
+        <div class="col-md-4">
+                <img class="img-fluid" src="{% static "images/123.png"  %}">
+            </div>
+    </div>
 {% endblock %}

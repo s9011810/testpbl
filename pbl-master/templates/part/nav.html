@@ -1,7 +1,7 @@
 {% block nav %}
     <nav class="navbar navbar-expand-md bg-dark navbar-dark ">  <!-- 導覽列開始 -->
 
-        <div class="navbar-brand"><h2>劇本雲</h2></div>  <!-- Logo 放置處 -->
+        <div class="navbar-brand"><h2>羣創實驗課</h2></div>  <!-- Logo 放置處 -->
 
         <!-- 就是當畫面縮小時，摺疊起來的按鈕圖示 -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mylink">
@@ -17,11 +17,10 @@
 {#                <li class="nav-item">#}
 {#                  <a class="nav-link" href={% url "card"%}>回教室首頁</a>#}
 {#                </li>#}
-                  {% if request.session.user_name %}
+                  {% if  request.session.user_identify == 'teacher'  %}
                   <li class="nav-item ">
                     <a class="nav-link" href="/createclass">建立教室</a>
                 </li>
-                  {% endif %}
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'index' %}">切換教室</a>
                 </li>
@@ -31,8 +30,14 @@
               <li class="nav-item">
                   <a class="nav-link" href={% url 'card_manage' %}>成果發表</a>
                 </li>
+                  {% endif %}
               </ul>
              <ul class="navbar-nav">
+              {% if  request.session.user_name != null %}
+   <li class="nav-item">
+       <a class="nav-link">{{ request.session.c_name }}! 哈囉！</a>
+   </li>
+                          {% endif %}
                 <li class="nav-item ">
                     <a class="nav-link" href="/register"><i class="fas fa-user-plus">註冊</i></a>
                 </li>

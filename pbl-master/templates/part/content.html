@@ -15,12 +15,12 @@
 						<tr>
                             {% if request.session.user_identify == 'teacher' %}
                                 <td><a href="/createclass"><button class="btn" onclick="newclass()"><h4>+新教室</h4></button></a></td>
-                            {% endif %}
 
 {#                            <td ><h4><a href={% url 'card' %}> 進入新教室</a></h4></td>#}
                             <td ><a href={% url 'check_card' %}> <button class="btn"><h4>卡片資料庫</h4></button></a></td>
                             <td><a href={% url 'check_group' %}><button class="btn"><h4>群組管理</h4></button></a></td>
 							<td ><h4>+成果櫥窗</h4></td>
+                             {% endif %}
 						</tr>
 					</table>
 

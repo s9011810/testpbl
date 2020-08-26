@@ -14,8 +14,10 @@
     <thead >
     <th class="text-center"scope="col"><a href={% url 'upload_card' %} ><button type="button" class="btn">創卡</button></a> </th>
     <th class="text-center" scope="col"><a href="{% url 'card_manage' %}" class="btn">專案卡片資料庫</a></th>
+    {% if request.session.user_identify == 'teacher' %}
     <th class="text-center" scope="col"><a href="{% url 'check_card' %}" class="btn">專案成果上傳</a> </th>
     <th class="text-center" scope="col"><a href="{% url 'check_group' %}" class="btn">群組管理</a> </th>
+    {% endif %}
     </thead>
 </table>
 {% block cardcontext %}

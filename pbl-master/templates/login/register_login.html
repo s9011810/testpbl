@@ -14,7 +14,10 @@
 
                   {% csrf_token %}
                   <h3 class="text-center">歡迎註冊</h3>
-
+                    <div class="form-group">
+                      {{ register_form.c_name.label_tag }}
+                      {{ register_form.c_name}}
+                  </div>
                   <div class="form-group">
                       {{ register_form.username.label_tag }}
                       {{ register_form.username}}

@@ -1,17 +1,15 @@
 
 {% load staticfiles %}
 <div class="container">
-<div class="row border border-dark rounded " >
-        <div class="col-md-6" id="chart3">
+<div class="row border border-dark rounded" id="chart3">
+        <div class="col-md-6">
             <div class="row">
-                <div class="col-md-6"></div>
                  <div class="col-md-2"></div>
                 <div class="col-md-4" style="margin-left: 95%;">
                     <div id="card-idea"></div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6"></div>
                 <div class="col-md-2"></div>
                 <div class="col-md-4" style="margin-left: 95%;">
                  <p style="font-size:30px;">作者:{{ unit.author}};</p>
@@ -19,46 +17,47 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6"></div>
+                <div class="col-md-4"></div>
                 <div class="col-md-2">
                     <h1 style="text-orientation: upright;writing-mode: vertical-lr;">{{ unit.title }}</h1><br>
                  </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div id="card-img"></div>
                 </div>
             </div>
-            <div class="row">
-        <div class="col-md-8">
-            <div id="card-context1"></div>
         </div>
+    <div class="col-md-8">
+         <div class="row">
+                <div class="col-md-4">
+                    <div id="card-context1"></div>
+                </div>
 
-        <div class="col-md-4">
-            <div id="card-text"></div>
-        </div>
-    </div>
+            </div>
             <div class="row">
+                <div class="col-md-4"></div>
                 <div class="col-md-8">
+                    <div id="card-text"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
                     <div id="card-context"> </div><br>
                 </div>
-                 <div class="col-md-4">
-                    <div id="card-text1"> </div>
-                </div>
-                <div class="col-md-8"></div>
-                <div class="col-md-4">
-                    <div id="card-img"></div>
-                </div>
             </div>
             <div class="row">
-                <div class="col-md-8"></div>
-                <div class="col-md-4">
+                <div class ="col-md-4"></div>
+                <div class="col-md-8">
+                    <div id="card-text1"> </div>
+                </div>
+            </div>
+        <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
                     <button id="btnSave" class="btn-sm btn-danger" onclick="screenshot1()">確認圖片並儲存</button>
                     <a href={% url "card_manage" %}> <button class="btn-success">至專案資料庫</button></a>
                 </div>
             </div>
     </div>
-         <div class="col-md-6">
-
-        </div>
 </div>
 </div>
 
@@ -78,10 +77,10 @@
         var ideah=hjb51/20;
         var btnm=hjb51/4;
         document.getElementById("card-img").innerHTML='<img src="/{{ unit.cover.thumbnail }}" style="float:right;width:'+imgw+'px;height:'+imgh+'px;float:left;"/>';
-        document.getElementById("card-context").innerHTML='<img src="{% static "images/卡片元素-04.png" %}" style="float:right;height:'+conh+'px;width:'+conw+'px;margin-top:'+conm+'px">';
-        document.getElementById("card-context1").innerHTML='<img src="{% static "images/卡片元素-05.png" %} " style="float:right;height:'+conh+'px;width:'+conw+'px;margin-bottom: 10px">';
-        document.getElementById('card-text').innerHTML='<h4 style="margin-top:'+conh/2+'px">{{ unit.context }}</h4>';
-        document.getElementById('card-text1').innerHTML='<h4 style="margin-top:'+conm+'px">{{ unit.context1 }}</h4>';
+        document.getElementById("card-context").innerHTML='<img src="{% static "images/卡片元素-04.png" %}" style="float:right;height:'+conh+'px;width:'+conw+'px;margin-top:'+conm+'px;">';
+        document.getElementById("card-context1").innerHTML='<img src="{% static "images/卡片元素-05.png" %} " style="float:right;height:'+conh+'px;width:'+conw+'px;margin-top:'+conm+'px;">';
+        document.getElementById('card-text').innerHTML='<p>{{ unit.context }}</p>';
+        document.getElementById('card-text1').innerHTML='<p>{{ unit.context1 }}</p>';
         document.getElementById('card-idea').innerHTML='<img src="{% static "images/卡片元素-02.png" %}" width="'+ideaw+'px;" height="'+ideah+'px;"">';
     }
     function screenshot1(){

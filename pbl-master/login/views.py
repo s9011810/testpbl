@@ -24,6 +24,8 @@ def login(request):
             username = login_form.cleaned_data.get('username')
             password = login_form.cleaned_data.get('password')
             identify = login_form.cleaned_data.get('identify')
+
+            c_name = login_form.cleaned_data.get('c_name')
             try:
                 user = models.User.objects.get(name=username)
             except :
@@ -35,6 +37,7 @@ def login(request):
                 request.session['user_id'] = user.id
                 request.session['user_name'] = user.name
                 request.session['user_identify'] = user.identify
+                request.session['c_name'] = user.c_name
                 return redirect('index')
             else:
                 message = '密碼不正確！'
@@ -60,6 +63,7 @@ def register(request):
             email = register_form.cleaned_data.get('email')
             sex = register_form.cleaned_data.get('sex')
             identify = register_form.cleaned_data.get('identify')
+            c_name = register_form.cleaned_data.get('c_name')
             if password1 != password2:
                 message = '两次输入的密码不同！'
                 return render(request, 'register_base.html', locals())
@@ -79,6 +83,7 @@ def register(request):
                 new_user.email = email
                 new_user.sex = sex
                 new_user.identify = identify
+                new_user.c_name = c_name
                 new_user.save()
 
                 return redirect('login')

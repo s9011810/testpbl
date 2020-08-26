@@ -32,16 +32,6 @@ class CardForm(forms.ModelForm):
             }
         )
     )
-    pdf = forms.FileField(
-        widget=forms.FileInput(
-            attrs={
-                'class': 'form-control-file form-control-lg',
-                'id': 'pdf',
-                'name': 'pdf',
-
-            }
-        )
-    )
     class_material = forms.CharField(widget=forms.TextInput(
         attrs={
             'class': 'form-control',
@@ -71,7 +61,7 @@ class CardForm(forms.ModelForm):
 
     class Meta:
         model = UPCard
-        fields = ('title','author','cover','pdf','class_material','activate','group')
+        fields = ('title','author','cover','class_material','activate','group')
 
 
 class CreateCardForm(forms.ModelForm):

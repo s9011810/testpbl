@@ -12,7 +12,6 @@ from login.models import CreateClass, CreateActivate, Group, User
 from .forms import CardForm, CreateCardForm, RowCreateCardForm
 from .imglib import Picture_part
 from .models import UPCard, Card, TestCard, RowCard
-from easy_pdf.views import PDFTemplateView
 
 
 def post_card(request, pk):

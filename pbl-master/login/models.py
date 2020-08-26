@@ -9,7 +9,7 @@ class User(models.Model):
         ('guest', "學員"),
         ('teacher', "引導師"),
     )
-
+    c_name = models.CharField(max_length=128, default="學生姓名")
     name = models.CharField(max_length=128, unique=True)
     password = models.CharField(max_length=256)
     email = models.EmailField(unique=True)

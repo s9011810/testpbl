@@ -10,6 +10,7 @@ class UserForm(forms.Form):
 
 
 class RegisterForm(forms.Form):
+    c_name = forms.CharField(label="中文名", max_length=128, widget=forms.TextInput(attrs={'class': 'form-control'}))
     gender = (
         ('guest', "訪客"),
         ('teacher', "引導師"),
