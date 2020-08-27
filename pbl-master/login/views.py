@@ -28,9 +28,9 @@ def login(request):
             c_name = login_form.cleaned_data.get('c_name')
             try:
                 user = models.User.objects.get(name=username)
-            except :
+            except:
                 message = '用戶不存在！'
-                return render(request, 'login_base.html')
+                return render(request, 'login_base.html', locals())
 
             if user.password == password:
                 request.session['is_login'] = True

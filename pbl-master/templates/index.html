@@ -18,10 +18,9 @@
     </table>
                 </div>
             </div>
-    </div>
         {% endif %}
      {%  if request.session.user_name == null %}
-        <div class="row" style="margin-top: 20%">
+        <div class="row" style="margin-top: 10%;margin-bottom: 10%">
              <div class="col-md-4">
         </div>
         <div class="col-md-4">
@@ -31,17 +30,18 @@
         <div class="col-md-4">
 
         </div>
+</div>
+         <div class="card-group">
+  <div class="card col-md-4">
+    <img class="card-img-top w-50" src="{% static 'images/123.png' %}" alt="Card image cap" style="padding-left: 10%">
+  </div>
+  <div class="card col-md-4">
+    <img class="card-img-top w-50" src="{% static 'images/123.png' %}" alt="Card image cap" style="padding-left: 10%">
+  </div>
+  <div class="card col-md-4">
+    <img class="card-img-top w-50" src="{% static 'images/123.png' %}" alt="Card image cap" style="padding-left: 10%">
+  </div>
         </div>
+</div>
     {% endif %}
-    <div class="row">
-        <div class="col-md-4">
-                <img class="img-fluid" src="{% static "images/123.png"  %}">
-            </div>
-        <div class="col-md-4">
-                <img class="img-fluid" src="{% static "images/123.png"  %}">
-            </div>
-        <div class="col-md-4">
-                <img class="img-fluid" src="{% static "images/123.png"  %}">
-            </div>
-    </div>
 {% endblock %}
