@@ -12,6 +12,7 @@
     </tr>
     {% endif %}
     <tr>
+    {{ class_a }}
         {% for activate_a1 in activate_a %}
             {% for group_a1 in group_a %}
        {% if group_a1.activate == activate_a1 or request.session.user_identify == 'teacher' %}

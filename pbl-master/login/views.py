@@ -38,6 +38,7 @@ def login(request):
                 request.session['user_name'] = user.name
                 request.session['user_identify'] = user.identify
                 request.session['c_name'] = user.c_name
+                request.session['class_a'] = user.class_a_id
                 return redirect('index')
             else:
                 message = '密碼不正確！'
@@ -64,6 +65,7 @@ def register(request):
             sex = register_form.cleaned_data.get('sex')
             identify = register_form.cleaned_data.get('identify')
             c_name = register_form.cleaned_data.get('c_name')
+            class_a = register_form.cleaned_data.get('class_a_id')
             if password1 != password2:
                 message = '两次输入的密码不同！'
                 return render(request, 'register_base.html', locals())
@@ -84,6 +86,7 @@ def register(request):
                 new_user.sex = sex
                 new_user.identify = identify
                 new_user.c_name = c_name
+                new_user.class_a_id = class_a
                 new_user.save()
 
                 return redirect('login')
@@ -136,12 +139,14 @@ def create_activate(request):
 
 
 def view_activate(request, pk):
+    class_a = request.session['class_a_id']
     group_a = models.Group.objects.filter(group_user=request.session['user_id'])
     activte_a = models.CreateActivate.objects.filter(class_id=pk)
     context = {
         'activate_a': activte_a,
         'pk': pk,
-        'group_a': group_a
+        'group_a': group_a,
+        'class_a': class_a
     }
     return render(request, 'view_activate.html', context)
 
