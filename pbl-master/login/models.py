@@ -15,7 +15,6 @@ class User(models.Model):
     email = models.EmailField(unique=True)
     identify = models.CharField(max_length=123, choices=gender, default='guest')
     c_time = models.DateTimeField(auto_now_add=True)
-    class_a = models.ForeignKey('CreateClass', on_delete=models.CASCADE, blank=True, null=True)
     # group = models.ForeignKey('Group',  on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
