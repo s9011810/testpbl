@@ -9,7 +9,8 @@
         height: 300px;
     }
 </style>
-    <img class="d-block w-100" style="height: 10em" src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg">
+{% load static %}
+    <img class="d-block w-100" style="height: 10em" src="{% static "images/background.jpg"  %}">
 <table class="table table-bordered">
     <thead >
     <th class="text-center"scope="col"><a href={% url 'upload_card' %} ><button type="button" class="btn">創卡</button></a> </th>
