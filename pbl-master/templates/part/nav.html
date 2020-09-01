@@ -1,6 +1,10 @@
+<style>
+    h2,b,i{
+        color: #efefef;
+    }
+</style>
 {% block nav %}
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark ">  <!-- 導覽列開始 -->
-
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark " id="nav-css">  <!-- 導覽列開始 -->
         <div class="navbar-brand"><h2>羣創實驗課</h2></div>  <!-- Logo 放置處 -->
 
         <!-- 就是當畫面縮小時，摺疊起來的按鈕圖示 -->
@@ -12,30 +16,30 @@
         <div class="collapse navbar-collapse " id="mylink">
               <ul class="navbar-nav mr-auto float-right">
                 <li class="nav-item ">
-                  <a class="nav-link" href={% url 'index' %}>回個人首頁</a>
+                    <a class="nav-link" href={% url 'index' %}><b>回個人首頁</b></a>
                 </li>
 {#                <li class="nav-item">#}
 {#                  <a class="nav-link" href={% url "card"%}>回教室首頁</a>#}
 {#                </li>#}
                   {% if  request.session.user_identify == 'teacher'  %}
                   <li class="nav-item ">
-                    <a class="nav-link" href="/createclass">建立教室</a>
+                      <a class="nav-link" href="/createclass"><b>建立教室</b></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'index' %}">切換教室</a>
+                    <a class="nav-link" href="{% url 'index' %}"><b>切換教室</b></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href={% url 'check_card' %}>卡片資料庫</a>
+                    <a class="nav-link" href={% url 'check_card' %}><b>卡片資料庫</b></a>
                 </li>
               <li class="nav-item">
-                  <a class="nav-link" href={% url 'card_manage' %}>成果發表</a>
+                  <a class="nav-link" href={% url 'card_manage' %}><b>成果發表</b></a>
                 </li>
                   {% endif %}
               </ul>
              <ul class="navbar-nav">
               {% if  request.session.user_name != null %}
    <li class="nav-item">
-       <a class="nav-link">{{ request.session.c_name }}! 哈囉！</a>
+       <a class="nav-link"><b>{{ request.session.c_name }}! 哈囉！</b></a>
    </li>
                           {% endif %}
                 <li class="nav-item ">
